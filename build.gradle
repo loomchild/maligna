@@ -1,7 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-version = '1.0'
+version = '3.0.0-SNAPSHOT'
+group = 'net.loomchild'
+
+sourceCompatibility = 6
 
 mainClassName = 'net.loomchild.maligna.ui.Maligna'
 
@@ -11,7 +14,7 @@ repositories {
 }
 
 dependencies {
-	compile 'net.loomchild:segment:2.0.0-SNAPSHOT
+	compile 'net.loomchild:segment:2.0.0-SNAPSHOT'
 	compile 'commons-logging:commons-logging:1.1.1'
 	compile 'commons-cli:commons-cli:1.2'
 	compile 'junit:junit:4.1'
