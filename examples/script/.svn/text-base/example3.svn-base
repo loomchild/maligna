@@ -1,6 +1,0 @@
-#!/bin/bash
-
-SCRIPT_DIR=`dirname $0`
-PROJECT_HOME=$SCRIPT_DIR/../..
-
-$PROJECT_HOME/bin/maligna parse -c txt $PROJECT_HOME/example/txt/poznan-pl.txt $PROJECT_HOME/example/txt/poznan-de.txt  |  $PROJECT_HOME/bin/maligna modify -c split-sentence  |  $PROJECT_HOME/bin/maligna modify -c trim  |  $PROJECT_HOME/bin/maligna align -c viterbi -a oracle,normal -d $PROJECT_HOME/example/align/human/poznan-oracle.al -n char -s iterative-band  >  poznan-oracle.al
