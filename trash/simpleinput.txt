@@ -1,4 +1,0 @@
-dokument1, paragraf1
-
-dokument2, paragraf1
-dokument2, paragraf2

@@ -1,6 +1,0 @@
-#!/bin/bash
-SCRIPT_DIR=`dirname $0`
-PROJECT_HOME=$SCRIPT_DIR/../..
-FILE=poznan
-
-cat $FILE-split.al  |  $PROJECT_HOME/bin/maligna modify -c unifyrarewords  |  $PROJECT_HOME/bin/maligna align -c fb -a poisson-translation -n word -s iterband -t $FILE-align-length.al  >  $FILE-auxiliary-align.al
