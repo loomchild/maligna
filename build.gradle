@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+version = '1.0'
+
+mainClassName = 'net.loomchild.maligna.ui.Maligna'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	compile 'net.loomchild:segment:2.0.0-SNAPSHOT
+	compile 'commons-logging:commons-logging:1.1.1'
+	compile 'commons-cli:commons-cli:1.2'
+	compile 'junit:junit:4.1'
+}
+
+applicationDistribution.from("$projectDir/examples") {
+    into "examples"
+}
+applicationDistribution.from("$projectDir/README.md")
+
+distZip.doLast {
+	file("$destinationDir/$archiveName").renameTo("$destinationDir/"+baseName+'-'+version+'.zip')
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.7'
+}
+

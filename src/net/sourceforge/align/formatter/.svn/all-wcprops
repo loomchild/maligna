@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/align/!svn/ver/44/trunk/maligna/src/net/sourceforge/align/formatter
+END
+PresentationFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/PresentationFormatter.java
+END
+AlFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/AlFormatter.java
+END
+HtmlFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/HtmlFormatter.java
+END
+TmxFormatterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/TmxFormatterTest.java
+END
+FormatterTestSuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/FormatterTestSuite.java
+END
+InfoFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/InfoFormatter.java
+END
+TmxFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/align/!svn/ver/44/trunk/maligna/src/net/sourceforge/align/formatter/TmxFormatter.java
+END
+Formatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/Formatter.java
+END
+PlaintextFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/PlaintextFormatter.java
+END
+PresentationFormatterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/PresentationFormatterTest.java
+END
+AlFormatterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/formatter/AlFormatterTest.java
+END

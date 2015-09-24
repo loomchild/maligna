@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<paragraph>
+		<sentence language="en">First sentence. </sentence>
+		<sentence language="pl">Drugie zdanie.</sentence>
+	</paragraph>
+	<paragraph>
+		<sentence language="en">Third sentence.</sentence>
+	</paragraph>
+</document>

@@ -1,0 +1,104 @@
+10
+
+dir
+50
+https://align.svn.sourceforge.net/svnroot/align/trunk/maligna/src/net/sourceforge/align
+https://align.svn.sourceforge.net/svnroot/align
+
+
+
+2010-12-02T11:07:14.247557Z
+50
+jarekl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4439f797-f042-0410-9cfb-804d0787b311
+
+
+
+
+
+
+
+
+()
+
+model
+dir
+
+formatter
+dir
+
+AlignTestSuite.java
+file
+
+
+
+
+2010-10-28T16:40:13.000000Z
+91955de2399fa906636370eba50df4bc
+2010-11-02T23:37:42.328942Z
+42
+jarekl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+872
+
+matrix
+dir
+
+progress
+dir
+
+filter
+dir
+
+comparator
+dir
+
+calculator
+dir
+
+parser
+dir
+
+coretypes
+dir
+
+ui
+dir
+
+util
+dir
+

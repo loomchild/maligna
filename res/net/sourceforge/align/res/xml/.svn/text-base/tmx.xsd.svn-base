@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+	schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+<xs:element name="body">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="tu" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="bpt">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="sub"/>
+    </xs:choice>
+
+    <xs:attribute name="i" use="required" type="xs:string"/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="x" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ept">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="sub"/>
+    </xs:choice>
+
+    <xs:attribute name="i" use="required" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="header">
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="note"/>
+      <xs:element ref="prop"/>
+      <xs:element ref="ude"/>
+    </xs:choice>
+
+    <xs:attribute name="adminlang" use="required" type="xs:string"/>
+    <xs:attribute name="changedate" type="xs:string"/>
+    <xs:attribute name="changeid" type="xs:string"/>
+    <xs:attribute name="creationdate" type="xs:string"/>
+    <xs:attribute name="creationid" type="xs:string"/>
+    <xs:attribute name="creationtool" use="required" type="xs:string"/>
+    <xs:attribute name="creationtoolversion" use="required" type="xs:string"/>
+    <xs:attribute name="datatype" use="required" type="xs:string"/>
+    <xs:attribute name="o-encoding" type="xs:string"/>
+    <xs:attribute name="o-tmf" use="required" type="xs:string"/>
+    <xs:attribute name="segtype" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:NMTOKEN">
+          <xs:enumeration value="block"/>
+          <xs:enumeration value="paragraph"/>
+          <xs:enumeration value="sentence"/>
+          <xs:enumeration value="phrase"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="srclang" use="required" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="hi">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="hi"/>
+      <xs:element ref="ut"/>
+      <xs:element ref="it"/>
+      <xs:element ref="ept"/>
+      <xs:element ref="bpt"/>
+      <xs:element ref="ph"/>
+    </xs:choice>
+
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="x" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="it">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="sub"/>
+    </xs:choice>
+
+    <xs:attribute name="pos" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:NMTOKEN">
+          <xs:enumeration value="begin"/>
+          <xs:enumeration value="end"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="x" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="map">
+  <xs:complexType>
+    <xs:attribute name="code" type="xs:string"/>
+    <xs:attribute name="ent" type="xs:string"/>
+    <xs:attribute name="subst" type="xs:string"/>
+    <xs:attribute name="unicode" use="required" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="note">
+  <xs:complexType mixed="true">
+    <xs:sequence>
+    </xs:sequence>
+
+    <xs:attribute name="o-encoding" type="xs:string"/>
+    <xs:attribute ref="xml:lang"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ph">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="sub"/>
+    </xs:choice>
+
+    <xs:attribute name="assoc" type="xs:string"/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="x" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="prop">
+  <xs:complexType mixed="true">
+    <xs:sequence>
+    </xs:sequence>
+
+    <xs:attribute name="o-encoding" type="xs:string"/>
+    <xs:attribute name="type" use="required" type="xs:string"/>
+    <xs:attribute ref="xml:lang"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="seg">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="hi"/>
+      <xs:element ref="ut"/>
+      <xs:element ref="ph"/>
+      <xs:element ref="ept"/>
+      <xs:element ref="bpt"/>
+      <xs:element ref="it"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="sub">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="hi"/>
+      <xs:element ref="ut"/>
+      <xs:element ref="it"/>
+      <xs:element ref="ept"/>
+      <xs:element ref="bpt"/>
+      <xs:element ref="ph"/>
+    </xs:choice>
+
+    <xs:attribute name="datatype" type="xs:string"/>
+    <xs:attribute name="type" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="tmx">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="header"/>
+      <xs:element ref="body"/>
+    </xs:sequence>
+
+    <xs:attribute name="version" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="tu">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note"/>
+        <xs:element ref="prop"/>
+      </xs:choice>
+      <xs:element ref="tuv" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+    <xs:attribute name="changedate" type="xs:string"/>
+    <xs:attribute name="changeid" type="xs:string"/>
+    <xs:attribute name="creationdate" type="xs:string"/>
+    <xs:attribute name="creationid" type="xs:string"/>
+    <xs:attribute name="creationtool" type="xs:string"/>
+    <xs:attribute name="creationtoolversion" type="xs:string"/>
+    <xs:attribute name="datatype" type="xs:string"/>
+    <xs:attribute name="lastusagedate" type="xs:string"/>
+    <xs:attribute name="o-encoding" type="xs:string"/>
+    <xs:attribute name="o-tmf" type="xs:string"/>
+    <xs:attribute name="segtype">
+      <xs:simpleType>
+        <xs:restriction base="xs:NMTOKEN">
+          <xs:enumeration value="block"/>
+          <xs:enumeration value="paragraph"/>
+          <xs:enumeration value="sentence"/>
+          <xs:enumeration value="phrase"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="srclang" type="xs:string"/>
+    <xs:attribute name="tuid" type="xs:string"/>
+    <xs:attribute name="usagecount" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="tuv">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="note"/>
+        <xs:element ref="prop"/>
+      </xs:choice>
+      <xs:element ref="seg"/>
+    </xs:sequence>
+
+    <xs:attribute name="changedate" type="xs:string"/>
+    <xs:attribute name="changeid" type="xs:string"/>
+    <xs:attribute name="creationdate" type="xs:string"/>
+    <xs:attribute name="creationid" type="xs:string"/>
+    <xs:attribute name="creationtool" type="xs:string"/>
+    <xs:attribute name="creationtoolversion" type="xs:string"/>
+    <xs:attribute name="datatype" type="xs:string"/>
+    <xs:attribute name="lastusagedate" type="xs:string"/>
+    <xs:attribute name="o-encoding" type="xs:string"/>
+    <xs:attribute name="o-tmf" type="xs:string"/>
+    <xs:attribute name="usagecount" type="xs:string"/>
+    <xs:attribute ref="xml:lang" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ude">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="map" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+    <xs:attribute name="base" type="xs:string"/>
+    <xs:attribute name="name" use="required" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ut">
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="sub"/>
+    </xs:choice>
+
+    <xs:attribute name="x" type="xs:string"/>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

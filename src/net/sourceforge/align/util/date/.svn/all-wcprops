@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/util/date
+END
+DateParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/align/!svn/ver/40/trunk/maligna/src/net/sourceforge/align/util/date/DateParser.java
+END
+InvalidDateException.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/util/date/InvalidDateException.java
+END

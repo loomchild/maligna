@@ -1,0 +1,35 @@
+	
+/*	
+	private TranslationModel performTrainingIteration1(
+			List< List<Integer> > sourceSegmentList, 
+			List< List<Integer> > targetSegmentList) {
+		TrainedTranslationModel newModel = new TrainedTranslationModel();
+		Iterator< List<Integer> > sourceSegmentIterator = 
+				sourceSegmentList.iterator();
+		Iterator< List<Integer> > targetSegmentIterator = 
+				targetSegmentList.iterator();
+		
+		while(sourceSegmentIterator.hasNext() 
+				&& targetSegmentIterator.hasNext()) {
+			List<Integer> sourceSegment = sourceSegmentIterator.next();
+			List<Integer> targetSegment = targetSegmentIterator.next();
+
+			for (int targetWid : targetSegment) {
+				float probability = 1.0f / sourceSegment.size();
+
+				for (int sourceWid : sourceSegment) {
+					TranslationData newModelData = newModel.get(sourceWid);
+					float newModelProbability = 
+						newModelData.getTranslationProbability(targetWid);
+					float newProbability = newModelProbability + probability;
+					
+					newModelData.setTranslationProbability(targetWid,
+							newProbability);
+				}
+			}
+		}
+
+		return newModel;
+		
+	}
+*/

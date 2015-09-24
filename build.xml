@@ -1,0 +1,140 @@
+<project name="maligna" default="compile" basedir=".">
+
+	<description>Maligna is a bilingual sentence aligner.</description>
+	
+
+	<property file="build.number" />
+	<property file="build.properties" />
+	
+	<tstamp>
+		<format property="build.date" pattern="yyyy-MM-dd"/>
+	</tstamp>
+
+	<path id="project.class.path">
+		<pathelement path="${java.class.path}"/>
+		<pathelement location="build/classes"/>
+		<pathelement location="res"/>
+		<fileset dir="lib" includes="**/*.jar" />
+	</path>
+	
+	<filterset id="filter.version">
+		<filter token="project.fullversion" value="${project.fullversion}"/>
+		<filter token="build.date" value="${build.date}"/>
+	</filterset>
+
+	
+	<target name="init">
+		<mkdir dir="build"/>
+		<mkdir dir="build/classes"/>
+		<mkdir dir="build/dist"/>
+		<mkdir dir="build/javadoc"/>
+	</target>
+
+	
+	<target name="compile" depends="init" description="compile the source">
+		<javac 
+			srcdir="src" 
+			destdir="build/classes" 
+			encoding="utf-8"
+			classpathref="project.class.path"
+			source="1.6"
+			target="1.6"
+			debug="on"
+			includeantruntime="false"/>
+		<copy todir="build/classes">
+			<fileset dir="res" includes="**/*"/>
+		</copy>
+	</target>
+
+	
+    <target name="jardist" depends="compile" description="generate binary jar archive">
+		<buildnumber/>
+		<delete file="build/dist/${project.name}-*.jar" failonerror="false"/>
+		<jar jarfile="build/dist/${project.fullname}.jar">
+			<fileset dir="build/classes" />
+			<fileset dir="src" />
+			<manifest>
+				<attribute name="Built-By" value="${project.authors}"/>
+				<attribute name="Build-Date" value="${build.date}"/>
+				<attribute name="Implementation-Version" value="${project.fullversion}"/>
+			</manifest>
+		</jar>
+	</target>
+
+	
+	<target name="javadoc" depends="init" description="generate javadoc">
+		<delete dir="build/javadoc" />
+		<javadoc 
+			destdir="build/javadoc" 
+			encoding="utf-8"
+			charset="utf-8"
+			classpathref="project.class.path"
+			source="1.6"
+			author="true"
+			version="true"
+			use="true"
+			windowtitle="maligna">
+			<fileset dir="src">
+				<include name="**/*.java"/>
+				<exclude name="**/*Test.java"/>
+			</fileset>
+		</javadoc>
+	</target>
+
+	
+	<target name="bindist" depends="jardist, javadoc" description="generate full binary distribution">
+		
+		<delete file="build/dist/${project.name}-*.zip" failonerror="false"/>
+		<delete dir="build/dist/${project.name}-*" failonerror="false"/>
+		<mkdir dir="build/dist/${project.fullname}"/>
+		
+		<copy todir="build/dist/${project.fullname}">
+			<fileset dir=".">
+				<include name="lib/**"/>
+				<include name="example/**"/>
+				<include name="result/**"/>
+				<include name="bin/**"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="build/dist/${project.fullname}" filtering="true">
+			<filterset refid="filter.version"/>
+			<fileset dir=".">
+				<include name="doc/**"/>
+			</fileset>
+		</copy>
+
+		<copy file="build/dist/${project.fullname}.jar" todir="build/dist/${project.fullname}/lib"/>
+
+		<copy todir="build/dist/${project.fullname}/doc">
+			<fileset dir="build">
+				<include name="javadoc/**"/>
+			</fileset>
+		</copy>
+		
+
+		<zip destfile="build/dist/${project.fullname}.zip">
+			<fileset dir="build/dist">
+				<include name="${project.fullname}/**"/>
+				<exclude name="${project.fullname}/bin/**"/>
+				<exclude name="${project.fullname}/example/script/**"/>
+			</fileset>
+			<zipfileset dir="build/dist" filemode="755">
+				<include name="${project.fullname}/bin/**"/>
+				<include name="${project.fullname}/example/script/**"/>
+			</zipfileset>
+		</zip>
+		
+		<delete dir="build/dist/${project.fullname}"/>
+
+	</target>
+
+	
+	<target name="clean" description="clean up">
+		<delete includeemptydirs="true">
+			<fileset dir="build" includes="**/*" />
+		</delete>
+	</target>
+
+	
+</project>

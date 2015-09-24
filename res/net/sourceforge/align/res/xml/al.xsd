@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="segment" type="xs:string"/>
+	
+	<xs:complexType name="segmentlist">
+		<xs:sequence>
+			<xs:element ref="segment" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="sourcelist" type="segmentlist"/>
+	<xs:element name="targetlist" type="segmentlist"/>
+	
+	<xs:attribute name="score" type="xs:double"/>
+	
+	<xs:element name="alignment">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="sourcelist"/>
+				<xs:element ref="targetlist"/>
+			</xs:all>
+			<xs:attribute ref="score"/>
+		</xs:complexType>
+	</xs:element> 
+
+	<xs:element name="alignmentlist">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="alignment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		
+</xs:schema>

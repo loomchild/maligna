@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/align/!svn/ver/44/trunk/maligna/src/net/sourceforge/align/calculator/length
+END
+PoissonDistributionCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/align/!svn/ver/43/trunk/maligna/src/net/sourceforge/align/calculator/length/PoissonDistributionCalculator.java
+END
+NormalDistributionCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/align/!svn/ver/44/trunk/maligna/src/net/sourceforge/align/calculator/length/NormalDistributionCalculator.java
+END
+LengthCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/align/!svn/ver/43/trunk/maligna/src/net/sourceforge/align/calculator/length/LengthCalculator.java
+END
+PoissonDistributionCalculatorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svnroot/align/!svn/ver/43/trunk/maligna/src/net/sourceforge/align/calculator/length/PoissonDistributionCalculatorTest.java
+END

@@ -1,0 +1,1227 @@
+﻿#$
+Kilka słów o tłumaczeniu automatycznym
+
+Idea tłumaczenia tekstów z jednego języka na drugi przy pomocy komputera  jest prawie tak samo stara jak idea samego komputera. Już w czasach zimnej wojny wywiadowcy aliantów oczekiwali, że komputer zastąpi wykwalifikowanych szpiegów w tłumaczeniu tajnych rosyjskich tekstów na język angielski, oszczędzając zapracowanym agentom wiele czasu i zachodu. Minęło wiele lat, a wizja międzynarodowej konferencji czy rozmowy bez udziału ludzkiego tłumaczenia mieści się wciąż w sferze marzeń. 
+
+Z czasem językoznawcy, filologowie i informatycy zweryfikowali swoje oczekiwania w stosunku do automatycznego komputerowego tłumacza i postarali się zmienić nastawienie użytkowników. Obie strony doszły zgodnie do wniosku, że komputer nie przetłumaczy Szekspira, Joyce’a, czy Whartona; ba! nie przetłumaczy dobrze nawet krótkiego dowcipu. Tłumaczenie komputerowe nie ma zupełnie zastosowania przy przekładach literackich, świetnie sprawdza się natomiast do tłumaczenia tekstów fachowych z określonej, najlepiej
+jak najwęższej dziedziny. 
+
+W tekstach ogólnych komputer może pomóc człowiekowi jedynie w zorientowaniu się w tematyce tekstu lub wykonać za niego „czarną robotę”, polegającą na odnalezieniu najwłaściwszych odpowiedników w danych kontekstach i ułożenie ich w najbardziej prawdopodobne konstrukcje językowe; ale to profesjonalnemu tłumaczowi pozostaje wygładzenie językowe przetłumaczonego tekstu.
+
+
+Tłumaczenie bezpośrednie
+
+Zastępowanie wyrazów języka źródłowego odpowiednimi wyrazami języka docelowego to najprostszy sposób dokonania tłumaczenia. Pomimo tego, że już w latach 60-tych wyciągnięto wniosek, że metoda ta daje nieakceptowalne wyniki, do dzisiaj rozwijane są systemy automatycznego tłumaczenia, w których jest ona stosowana.
+
+
+Tłumaczenie metodą transferu
+
+Najbardziej powszechną metodą w działających obecnie systemach tłumaczenia automatycznego jest metoda transferu. W jej skład wchodzą następujące części:
+• słownik,
+• reprezentacja tekstu,
+• gramatyka,
+• analiza składniowa.
+
+
+Słownik
+
+Słownik jest najbardziej pracochłonną częścią systemu tłumaczenia automatycznego metodą transferu. Opis danych w słowniku musi spełniać następujące kryteria:
+• opis musi być czytelny dla komputera, czyli na tyle uporządkowany, aby przy pomocy określonego algorytmu można było odczytać niezbędne informacje,
+• słownik powinien zawierać możliwie największą liczbę haseł,
+• hasła w słowniku powinny być opisane możliwie jak najdokładniej.
+Spełnienie powyższych trzech warunków równocześnie nie jest łatwe, a utworzenie “dobrego” słownika jest pracochłonne – dlatego też systemy tłumaczenia nierzadko opierają się na ograniczonym słownictwie.
+
+
+Reprezentacja tekstu
+
+Istotnym etapem tłumaczenia jest przedstawienie analizowanego fragmentu tekstu – najczęściej zdania – w pewnej postaci, którą można następnie przenieść na reprezentację zdania docelowego. Dwa najbardziej popularne sposoby reprezentowania zdania to struktura frazowa i drzewo zależności.
+Struktura frazowa jest najbardziej tradycyjnym sposobem przestawiania budowy zdania. Strukturę frazową zdania Zły wilk goni słabą owieczkę można przedstawić następująco:
+
+
+Powyższe drzewo reprezentuje budowę zdania rozumianą następująco: Zdanie składa się z frazy rzeczownikowej i frazy czasownikowej. Pierwsza z tych fraz składa się z przymiotnika zły i rzeczownika wilk, natomiast druga składa się z czasownika goni i podstruktury: frazy rzeczownikowej. Podstruktura frazy rzeczownikowej realizowana jest przez przymiotnik słabą i rzeczownik owieczkę.
+W reprezentacji przy użyciu drzewa zależności zakłada się, że w zdaniu każdy wyraz – za wyjątkiem najważniejszego, tj. czasownika głównego orzeczenia – jest zależny od innego wyrazu. Drzewo zależności obrazuje zestaw tych zależności. Reprezentacja przykładowego zdania w postaci drzewa zależności pokazuje następujący rysunek:
+
+
+
+Od czasownika goni zależne są: podmiot czynności, tj. pies oraz obiekt czynności, tj. mysz. Od rzeczowników zależne są określające je przymiotniki: duży od rzeczownika pies i wściekłą od rzeczownika mysz. 
+
+Ustalenie zestawu zależności nie zawsze jest rzeczą oczywistą – wyrazy zależne od siebie nie muszą ze sobą sąsiadować. Na przykład drzewo zależności zdania Biedną goni wilk zły owieczkę będzie identyczne z drzewem z rys. 3. Zależność pomiędzy przymiotnikiem słabą i rzeczownikiem owieczkę zostanie ustalona na wskutek zgodności przypadku, rodzaju oraz liczby obu wyrazów.
+
+
+Gramatyka
+
+Ustaliwszy sposób reprezentacji tekstu w systemie tłumaczenia należy wypracować metodę wyznaczania takiej reprezentacji. Najczęściej zadanie to dzielone jest na dwa zagadnienia: opis gramatyki i analizę składniową tekstu.
+
+Gramatyka rozumiana jest jako zestaw reguł, które określają w jaki sposób można tworzyć poprawne konstrukcje językowe. W opisie gramatyki można zawrzeć oprócz reguł tworzenia także informacje o budowie zdań konstruowanych na bazie gramatyki. 
+
+Gramatyka jest próbą matematycznego opisu zjawisk lingwistycznych, które łatwo nie poddają się matematycznemu sformalizowaniu. Dotychczas nie udało się stworzyć formalnego opisu żadnego języka mówionego, który by obejmował wszystkie możliwe konstrukcje. Innymi słowy, obojętnie jak bardzo skomplikowany byłby opis gramatyki, człowiekowi i tak uda się stworzyć zdanie, wychodzące poza taki opis.
+
+
+Analiza składniowa
+
+Proces sprawdzania, czy wybrany fragment tekstu (np. zdanie) zgodny jest z opisem gramatyki  nazywany jest analizą składniową. Wynikiem analizy jest stwierdzenie, czy dane zdanie zgodne jest z opisem gramatyki (takie zdanie uznawane jest jako poprawne) oraz podanie budowy zdania w wybranej reprezentacji (np. w postaci struktury składniowej czy drzewa zależności). Dla celów tłumaczenia automatycznego istotne jest to, by analiza składniowa podawała jakąś reprezentację również dla zdań, które nie są zgodne z opisem gramatyki.
+
+
+#$
+Charakterystyka systemu TRANSLATICA
+
+Historia rozwoju
+
+System TRANSLATICA rozwijany był w latach 1996 - 2002 jako system POLENG, tłumaczący wyłącznie w kierunku polsko-angielskim, na Wydziale Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu, między innymi dzięki przychylności ze strony Komitetu Badań Naukowych (w latach 1999-2000), Polskiego Towarzystwa Fonetycznego (w latach 1996-2001) oraz Allied Irish Bank (2002). 
+
+W roku 2004 powstały pierwsze wersje systemu TRANSLATICA (TRANSLATICA STANDARD i TRANSLATICA PRO), w których w oparciu o wytworzone techniki tłumaczenia oraz słownictwo zaczerpnięte z Wielkiego Słownika Angielsko-Polskiego PWN dodano funkcję tłumaczenia w kierunku angielsko-polskim.
+
+TRANSLATICA PREMIUM i TRANSLATICA OFFICE zostały wydane w roku 2005. W stosunku do swoich poprzedników znacznie poszerzono słownictwo systemu – na wielkich słownikach PWN opiera się teraz tłumaczenie w obu kierunkach. Wprowadzono dziesiątki tysięcy nowych idiomów. Poszerzono i poprawiono zestaw reguł tłumaczenia, zastosowano nowe techniki analizy tekstu (np. statystyczne metody oznaczania części mowy dla tekstu angielskiego). Działania te owocują wyraźną poprawą jakości tłumaczenia. Wiele uwagi poświęcono polepszeniu szybkości działania, np. słownik systemu (pomimo znacznie zwiększonej objętości) jest obecnie wczytywany mniej więcej trzy razy szybciej. 
+
+Dodano możliwość integracji z nowymi programami: Outlook Express, Mozilla, Writer. Tak szerokich możliwości współpracy z aplikacjami zewnętrznymi nie umożliwia żaden system translacji na świecie.
+
+
+Słownik systemu TRANSLATICA
+
+Jak wspomniano, słownik systemu tłumaczenia automatycznego  musi spełniać kryterium  czytelności dla algorytmu komputerowego. Opracowanie haseł w takim słowniku jest pracochłonne, dlatego niezbędne jest odpowiednie ich wyselekcjonowanie. Podczas prac nad kierunkiem z polskiego na angielski zebrano zbiór tekstów komputerowych, prawniczych, ekonomicznych i internetowych (taki wyselekcjonowany zbiór nazywany jest korpusem) i wyznaczono hasła najczęściej się w nim pojawiające. Hasła te zostały następnie opisane zgodnie z formalizmem systemu tłumaczenia i włączone do słownika systemu.  
+
+Źródłem słownictwa w kierunku angielsko-polskim jest Wielki Słownik Angielsko-Polski PWN – w skrócie WSAP (w kolejnych wersjach systemu planowane jest włączenie tworzonego obecnie słownika PWN w odwrotnym kierunku). Słownik WSAP został również wykorzystany (poprzez odwrócenie) do częściowego uzupełnienia haseł w polsko-angielskim słowniku systemu. Efekt tych działań jest taki, że opis haseł w kierunku angielsko-polskim jest bardziej dokładny (jedno hasło ma zazwyczaj więcej odpowiedników). Okazuje się, że większa dokładność jakość słownika nie przekłada się automatycznie na lepszą jakość tłumaczenia. Autorzy oceniają, że w obecnej wersji systemu lepsze jakościowo jest tłumaczenie w kierunku polsko-angielskim.
+
+
+Gramatyka, reprezentacja i analiza składniowa
+
+Autorzy stworzyli własny formalizm opis reguł gramatyki oraz reguł transferu (czyli przeniesienia reprezentacji jednego języka do innego). Ten sam formalizm stosowany jest do obu kierunków tłumaczenia, ale same reguły nie są swoim lustrzanym odbiciem. Innymi słowy, proces tłumaczenia nie jest odwracalny: przetłumaczenie tekstu w jednym kierunku i z powrotem najczęściej skutkuje innym tekstem niż wyjściowy (idea odwracalności tłumaczenia jest kusząca, ale ze względu na różnice między budową języków nie udało jej się dotychczas zastosować dla żadnej, nawet najbliższej, pary języków).
+
+W systemie TRANSLATICA tekst przetwarzany jest do postaci struktury frazowej. Analiza składniowa dopuszcza istnienie konstrukcji niezgodnych z opisem gramatyki (także tych, które są całkowicie niepoprawne językowo) i dla każdej konstrukcji tworzona (a następnie transferowana) jest jakaś reprezentacja tekstu.
+
+
+Niektóre ciekawe zagadnienia tłumaczenia
+
+Języki polski i angielski należą do różnych rodzin języków (odpowiednio do słowiańskiej i germańskiej) i dlatego konstrukcje nawet prostych zdań mogą się od siebie znacznie różnić.
+
+
+Różnice w składni
+
+W języku polskim dopuszczana jest znacznie większa swoboda kolejności składników (np. orzeczenie często poprzedza podmiot), w języku angielskim składnia zdania podlega znacznie większym ograniczeniom. Zdarza się i tak, że podmiot w zdaniu polskim pełni funkcję dopełnienia w odpowiadającym zdaniu angielskim i na odwrót. Ponadto w języku polskim funkcjonuje pojęcie podmiotu domyślnego - nieobecne z zasady w języku angielskim. Przyjrzyjmy się przykładom zdań, które obrazują wspomniane problemy.
+
+Ty mi się wcale nie podobasz.
+Ty nie podobasz się mi wcale.
+Ty wcale nie podobasz się mi.
+Ty wcale mi się nie podobasz.
+Wcale mi się nie podobasz.
+Mi się wcale nie podobasz. 
+Mi się nie podobasz wcale.
+Nie podobasz się mi wcale.
+
+Wszystkim tym zdaniom odpowiada w języku angielskim to samo zdanie:
+
+I don't like you at all.
+
+Właśnie w ten jednakowy sposób powyższe różne zdania polskie są tłumaczone na język angielski w systemie TRANSLATICA.
+
+
+Różnice w znaczeniu wyrazów
+
+Ten sam wyraz w języku polskim może mieć wiele odpowiedników w języku angielskim i na odwrót. Zadaniem sytemu tłumaczenia jest wyszukanie najlepszego odpowiednika w danym kontekście, w danym zdaniu. Na przykład w słowniku systemu POLENG czasownik take ma 41 różnych odpowiedników a może mieć jeszcze inne znaczenia w połączeniu  ze specyficznymi przyimkami (np. take in - nabrać kogoś), czy też rzeczownikami (np. take part – wziąć udział). Algorytm tłumaczenia systemu TRANSLATICA stara się dopasować najlepszy odpowiednik dzięki analizie struktury zdania i kontekstu tłumaczenia, jak na przykład w poniższych zdaniach:
+
+I took a shower.
+Wziąłem prysznic.
+
+We shall take a taxi.
+Weźmiemy taksówkę.
+
+We shall take a bus.
+Pojedziemy autobusem.
+
+My horse took a fence.
+Mój koń przeskoczył ogrodzenie.
+
+He has never taken a bribe.
+Nigdy nie przyjął łapówki.
+
+Such a jump takes courage.
+Taki skok wymaga odwagi.
+
+I am going to take tea.
+Zamierzam wypić herbatę.
+
+Tomorrow I will be taking a difficult exam.
+Jutro będę zdawać trudny egzamin.
+
+Take a seat.
+Usiądź.
+
+Will you take part in the meeting?
+Weźmiesz udział w spotkaniu?
+
+
+
+#$
+Instalacja lokalna
+
+W celu zainstalowania programu TRANSLATICA należy uruchomić program Setup.exe. Program instalacyjny kopiuje pliki do komputera użytkownika, a następnie wywołuje program Integrator. Zadaniem Integratora jest połączenie systemu TRANSLATICA z wybranymi przez użytkownika aplikacjami (patrz rozdział Integrator). System można odinstalować z menu Start: Start->Programy->Translatica X ->Uninstall.
+
+
+#$
+Instalacja przez sieć
+
+W przypadku sieci lokalnych zarządzanych przez systemy Microsoft Windows z dostępnymi usługami Active Directory, DNS, DHCP  możliwe jest również uruchomienie programu instalacyjnego w taki sposób, aby program TRANSLATICA został zainstalowany na wybranych końcówkach lub dla wybranych użytkowników. Aby móc zastosować instalację sieciową, usługi Active Directory, DNS, DHCP powinny być poprawnie skonfigurowane. 
+
+Na dowolnej partycji (nie będącej partycją systemową ani rozruchową) należy założyć folder (np. Msi_Pack), do którego kopiujemy plik instalacyjny Translatica-Enterprise.msi. Następnie folder ten udostępniamy w sieci.
+
+
+
+
+
+Z menu Start wybieramy opcję Programy -> Narzędzia administracyjne -> Użytkownicy i komputery usługi Active Directory. Z menu podręcznego interesującej nas domeny wybieramy opcję Nowy -> Jednostka organizacyjna.
+
+
+
+Do utworzonej jednostki organizacyjnej dodajemy istniejących użytkowników i/lub komputery.
+
+
+
+Następnie ustalamy właściwości jednostki organizacyjnej. W tym celu z menu podręcznego wybieramy opcję Właściwości. W zakładce Zasady grupy dodajemy nową zasadę grupy, po czym ją edytujemy. Po ukazaniu się okna Edytora obiektów zasad grupy dokonujemy konfiguracji użytkownika lub komputera w zależności od rodzaju instalacji, jaką chcemy przeprowadzić.
+
+
+Instalacja przez sieć dla użytkownika
+
+Celem takiej instalacji jest umożliwienie korzystania z programu TRANSLATICA wybranemu użytkownikowi na dowolnym komputerze domeny.
+Aby zainstalować program dla użytkownika, należy kliknąć ikonę Konfiguracja użytkownika a następnie Ustawienia oprogramowania.
+
+
+
+Klikamy prawym przyciskiem myszy na folderze Instalacja oprogramowania i wybieramy z menu opcję Nowy -> Pakiet, a następnie wskazujemy plik msi, który umieściliśmy w udostępnionym folderze instalacyjnym. Po wyświetleniu okna Rozmieszczenie oprogramowania wybieramy sposób instalacji. Jeżeli chcemy, aby instalacja przebiegła automatycznie bezpośrednio po zalogowaniu się użytkownika, wybieramy metodę Przypisany. Jeśli natomiast instalację chcemy pozostawić użytkownikowi, wybieramy  metodę Opublikowany. Wtedy użytkownik będzie mógł uruchomić pakiet instalacyjny na komputerze klienckim poprzez Panel sterowania -> Dodaj/Usuń programy -> Dodaj nowe programy.
+
+
+
+Aby zmienić metodę rozmieszczania, należy kliknąć prawym przyciskiem myszy na ikonie pakietu instalacyjnego i wybrać opcję Właściwości. W zakładce Rozmieszczanie zaznaczamy odpowiednią metodę.
+
+
+Instalacja przez sieć na wybranym komputerze
+
+Celem takiej instalacji jest umożliwienie korzystania z programu Translatica dowolnemu użytkownikowi na wybranym komputerze.
+
+Aby zainstalować program na wybranym komputerze, należy kliknąć ikonę Konfiguracja komputera a następnie Ustawienia oprogramowania.
+Klikamy prawym przyciskiem myszy na folderze Instalacja oprogramowania i wybieramy z menu opcję Nowy -> Pakiet, a następnie wskazujemy plik msi, który umieściliśmy w udostępnionym folderze instalacyjnym. W tym przypadku instalacja programu na komputerze zostanie przeprowadzona bezpośrednio po restarcie bądź uruchomieniu komputera.
+
+Uwaga: Szczegóły kolejnych kroków instalacji przez sieć mogą się różnić w zależności od systemu operacyjnego.
+
+#$
+Wersje programu
+
+System tłumaczący TRANSLATICA  jest dostępny w dwóch wersjach podstawowych: Premium i Office, oraz dwóch wersjach dedykowanych dla firm: Office+ i Enterprise.
+
+Wersja Premium przeznaczona jest do szybkiego przetwarzania dokumentów prostych językowo, lecz o złożonym formacie – właśnie takich jak strony internetowe czy dokumenty (maile) klienta pocztowego Outlook Express.
+
+Wersje Office, Office+ i Enterprise rozszerzają te możliwości o funkcje tłumaczenia dokumentów z programów pakietu MS Office: MS Word, MS Excel, MS PowerPoint i MS Outlook oraz programów Writer i Calc (dwie ostatnie aplikacja należą do pakietu Open Office). 
+
+Wersje Office+ i Enterprise dają ponadto możliwość tłumaczenia wielu dokumentów w trybie wsadowym. Wersja Enterprise jest dodatkowo wyposażona w funkcje pomagające dostosować system do potrzeb konkretnej firmy. Do funkcji tych należą: możliwość korzystania ze słowników dziedzinowych, budowanie i stosowanie pamięci tłumaczeń oraz korzystanie ze słownika firmy.
+
+#$
+Integrator
+
+Program Integrator uruchamia się z menu Start: Start -> Programy -> Translatica X -> Integrator. Aplikacja sprawdza, które z programów umożliwiających integrację z systemem TRANSLATICA są zainstalowane na komputerze, a następnie pozwala użytkownikowi dodać funkcję tłumaczenia do wybranych programów.
+
+Uruchomienie Integratora powoduje ukazanie się następującego okna:
+
+
+
+Dla programów niezainstalowanych na komputerze odpowiednia kratka jest nieaktywna (przyciemniona).
+Użytkownik ma możliwość wybrania jednej lub kilku aplikacji poprzez  zaznaczenie odpowiednich kratek.
+
+W każdym momencie użytkownik może odłączyć lub ponownie dołączyć funkcję tłumaczenia do wybranych programów. W tym celu należy uruchomić program Integrator (Start -> Programy -> Translatica X -> Integrator) i odpowiednio odznaczyć lub zaznaczyć wybrane aplikacje.
+
+
+#$
+Wersje językowe
+
+Program uruchamiany jest domyślnie w polskiej wersji językowej, ale możliwa jest zmiana języka obsługi na język angielski. W tym celu należy w oknie Edytora Translacji z menu Narzędzia wybrać polecenie Język programu. Pojawi się wówczas okno dialogowe Wybór języka programu.
+
+
+
+Okno to oprócz wyboru języka umożliwia wybór strony kodowej dla języka polskiego. Dla systemu Microsoft Windows w wersji polskiej domyślnie ustawiona jest strona kodowa Windows-1250. Pozostałe strony kodowe mogą być użyteczne w niepolskojęzycznych wersjach systemu Microsoft Windows.
+
+#$
+Tłumaczenie w programie Microsoft Internet Explorer
+
+Po włączeniu funkcji tłumaczenia do programu Internet Explorer (przy pomocy INTEGRATORaIDH_INTEGRATOR) na pasku zadań programu Internet Explorer pojawiają się cztery dodatkowe ikony:
+
+
+Naciśnięcie ikony  rozpoczyna proces tłumaczenia z języka polskiego na język angielski, a naciśnięcie ikony  rozpoczyna  tłumaczenie w odwrotnym kierunku. Trzecia ikona umożliwia zapis przetłumaczonej strony na komputerze (wykonanie zapisu przy pomocy funkcji programu Internet Explorer: Plik -> Zapisz spowodowałoby zapis strony przed tłumaczeniem).
+
+Przycisk  służy do uruchomienia okna Ustawienia, za pomocą którego można dokonać wyboru kontekstów i słowników używanych przez system (patrz UstawieniaIDH_MENU_TRANSLATION_SETTINGS).
+
+Tłumaczenie może odbywać się zarówno on-line (gdy użytkownik połączony jest z Internetem) jak i off-line (gdy połączenia nie ma, a przeznaczona do tłumaczenia strona internetowa zapisana jest w komputerze). Podczas tłumaczenia ekran podzielony zostaje na dwa okna: górne dla strony tłumaczonej (w języku źródłowym) i dolne dla strony przetłumaczonej. W trybie translacji automatycznie tłumaczone są wszystkie strony, do których użytkownik przemieszcza się przy pomocy odsyłaczy (hiperlinków). Aby wyjść z trybu translacji należy ponownie kliknąć wciśniętą ikonę tłumaczenia. Tłumaczenie jednej strony trwa od kilkunastu sekund do ponad minuty (dla złożonych stron).
+
+
+#$
+Tłumaczenie w programie Mozilla
+
+Po włączeniu funkcji tłumaczenia do programu Mozilla (przy pomocy INTEGRATORaIDH_INTEGRATOR) na pasku zadań programu Mozilla pojawiają się trzy dodatkowe przyciski:
+
+
+W programie Mozilla nie ma potrzeby dołączania przycisku zapisu, gdyż zapis przetłumaczonej strony możliwy jest z menu programu Mozilla.
+
+Proces tłumaczenia odbywa się jak w przypadku programu Internet Explorer (patrz Tłumaczenie w programie Internet ExplorerIDH_MS_INTERNET_EXPLORER). 
+
+Można podać przynajmniej dwa argumenty za korzystaniem z programu Mozilla (można go ściągnąć bezpłatnie ze strony (http://www.mozilla.org/start/1.7/*!EF(‘http://www.mozilla.org/start/1.7/’)) nawet w przypadku posiadania programu Internet Explorer. Po pierwsze, program ten jest znacznie bardziej bezpieczny, jeśli chodzi o możliwość ataku z Internetu na nasz komputer, po drugie umożliwia przeglądanie kilku dokumentów jednocześnie przy pomocy zakładek. W połączeniu z systemem TRANSLATICA daje to możliwość jednoczesnego przeglądania kilku przetłumaczonych stron.
+
+Otwarcie nowej zakładki w programie Mozilla dokonuje się poprzez wciśnięcie kombinacji klawiszy Ctrl-t. W otwartej zakładce można otworzyć nową stronę i przetłumaczyć ją (poprzez wciśnięcie przycisku translacji). Przetłumaczona strona jest pamiętana nawet po przejściu do innej zakładki. Powrót do zakładki z przetłumaczoną stroną umożliwia przeglądanie obu okien: z tekstem źródłowym i docelowym.
+
+
+#$
+Tłumaczenie w programie Outlook Express
+
+Po zintegrowaniu TRANSLATICA z Outlook Express, możliwe jest korzystanie z systemu tłumaczenia w trybie edycji lub odczytu poszczególnych wiadomości. Po otwarciu wybranej (lub nowej) wiadomości, na pasku narzędzi pojawiają się trzy dodatkowe przyciski:
+
+Naciśnięcie przycisków  lub  powoduje rozpoczęcie procesu tłumaczenia odpowiednio z języka polskiego na język angielski lub języka angielskiego na język polski. Przycisk  służy do wyboru kontekstów i słowników systemu tłumaczenia (patrz UstawieniaIDH_MENU_TRANSLATION_SETTINGS).
+Przetłumaczony tekst wiadomości pojawia się w osobnym oknie jako nowa wiadomość, przy czym tłumaczeniu podlegają zarówno treść jak i tytuł wiadomości.
+
+
+#$
+Tłumaczenie w programie Microsoft Word i Microsoft Excel
+
+Włączenie funkcji tłumaczenia do programu MS-Excel powoduje dodanie dodatkowego paska narzędzi (umieszczony on jest w górnym obszarze ekranu) oraz dodatkowej opcji w Menu Narzędzia.
+Pasek narzędzi systemu TRANSLATICA ma następujący wygląd:
+
+Pierwsza ikona umożliwia zmianę kierunku tłumaczenia. Kolejne przyciski mają następujące znaczenie:
+Przycisk  Tłumacz do nowego powoduje otwarcie nowego dokumentu i umieszczenie w nim  przetłumaczonego tekstu. Jeśli nie zaznaczono fragmentu, naciśnięcie przycisku powoduje tłumaczenie całego dokumentu.
+Przycisk  Tłumacz w oryginale powoduje zamianę zaznaczonego uprzednio fragmentu przetłumaczonym tekstem. Jeśli nie zaznaczono fragmentu, naciśnięcie przycisku powoduje tłumaczenie całego dokumentu.
+W programie MS-Excel dodano do powyższych dwóch przycisków dodatkowe funkcje: równoczesne wciśnięcie klawisz Shift powoduje tłumaczenie tylko bieżącego arkusza (a nie całego skoroszytu), zaś wciśnięcie klawisz Ctrl powoduje tłumaczenie tylko bieżącej komórki.
+
+Przyciski  Eksportuj do Edytora Translacji i  Importuj z Edytora Translacji umożliwiają współpracę aplikacji MS-Office z edytorem programu TRANSLATICA. Kliknięcie przycisku Eksportuj powoduje wysłanie zaznaczonego fragmentu (lub całego dokumentu) do Edytora Translacji. Uruchomiony zostaje program-edytor systemu TRANSLATICA, a wyeksportowany tekst umieszczany zostaje w oknie tekstu źródłowego. Użytkownik może przetłumaczyć tekst, a po przetłumaczeniu dokonać post-edycji w oknie tekst docelowego (np. poprzez wybranie wariantów tłumaczenia). Aby przetłumaczony tekst powrócił do aplikacji wysyłającej trzeba kliknąć przycisk Importuj w aplikacji MS-Excel. Wyeksportowany uprzednio tekst zostanie podmieniony przetłumaczonym tekstem z Edytora Translacji.
+
+ Opcje. Naciśnięcie przycisku powoduje wyświetlenie okna wyboru kontekstów i słowników używanych przez system (UstawieniaIDH_MENU_TRANSLATION_SETTINGS).
+
+Obsługa funkcji tłumaczenia w programie MS-Word jest analogiczna do obsługi w programie MS-Excel. Z oczywistych względów nie ma możliwości tłumaczenia pojedynczego arkusza, czy też komórki.
+
+
+#$
+Tłumaczenie w programie Microsoft PowerPoint
+
+W programie MS-PowerPoint możliwe jest dodatkowo tłumaczenie wybranych slajdów. W tym celu należy przejść do widoku sortowania slajdów (Widok -> Sortowanie slajdów), zaznaczyć interesujące slajdy i nacisnąć ikonę tłumaczenia.
+
+Warto zauważyć, że system dokonuje tłumaczenia obiektów osadzonych w dokumentach MS-Office (np. wykresu Excela w dokumencie PowerPoint).
+
+
+#$
+Tłumaczenie w programie Microsoft Outlook
+
+W programie tym system TRANSLATICA dodaje dwa nowe przyciski, odpowiadające kierunkom tłumaczenia. Tłumaczyć można jeden lub więcej listów (w celu przetłumaczenia grupy listów należy je zaznaczyć w wybranym folderze przed wciśnięciem ikony tłumaczenia). Przetłumaczone dokumenty przechowywane są w folderze Przetłumaczone (Translated w wersji angielskojęzycznej).
+
+
+#$
+Tłumaczenie w programach Writer i Calc
+
+Po integracji systemu TRANSLATICA z programem Writer lub Calc, do paska narzędzi dodawane są ikony pozwalające na uruchomienie tłumaczenia w obu kierunkach:
+ - tłumaczenie na język angielski
+ - tłumaczenie na język polski
+Dostępne jest również ustawianie opcji tłumaczenia (ikona ).
+Wszystkie powyższe akcje można również uruchomić, wybierając odpowiednie elementy z menu Translatica, dodanego do menu głównego programu.
+
+W przypadku programu Calc możliwe jest tłumaczenie jedynie całego skoroszytu a nie, jak w programie MS ExcelIDH_MS_WORD_AND_EXCEL, pojedynczych arkuszy czy komórek.
+
+
+#$
+Tłumaczenie za pomocą Edytora Translacji
+
+Edytor Translacji pojawia się na ekranie po uruchomieniu systemu TRANSLATICA (Start -> Programy -> Translatica X -> Translatica).
+
+
+#$K
+Menu programu
+
+PlikIDH_MENU_FILE	Wybierz menu Plik w celu wykonania operacji na plikach.
+EdycjaIDH_MENU_EDIT	Wybierz menu Edycja w celu wykonania poleceń edycyjnych.
+WidokIDH_MENU_VIEW	Wybierz menu Widok w celu określenia parametrów wyświetlania.
+TłumaczIDH_MENU_TRANSLATION	Wybierz menu Tłumacz w celu przetłumaczenia tekstu lub ustawienia parametrów tłumaczenia.
+NarzędziaIDH_MENU_TOOLS	Wybierz menu Narzędzia w celu wykorzystania dodatkowych narzędzi programu.
+PomocIDH_MENU_HELP	Wybierz menu Pomoc w celu uzyskania pomocy o programie.
+
+
+#$K
+Menu Plik
+
+Wybierz menu Plik w celu otwarcia lub zapisania tekstów okien źródłowego i docelowego lub w celu wyjścia z programu TRANSLATICA.
+
+NowyIDH_MENU_FILE_NEW	Nowy
+Otwórz tekst źródłowyIDH_MENU_FILE_OPEN	Otwórz
+Otwórz ponownieIDH_MENU_FILE_REOPEN	Otwórz ponownie
+Zapisz tekst źródłowyIDH_MENU_FILE_SAVE_SOURCE	Zapisz źródłowy
+Zapisz tekst źródłowy jakoIDH_MENU_FILE_SAVE_SOURCE_AS	Zapisz źródłowy jako
+Zapisz tekst docelowyIDH_MENU_FILE_SAVE_DESTINATION	Zapisz docelowy
+Zapisz tekst docelowy jakoIDH_MENU_FILE_SAVE_DESTINATION_AS	Zapisz docelowy jako
+Zapisz obaIDH_MENU_FILE_SAVE_BOTH	Zapisz oba
+Zapisz wszystkoIDH_MENU_FILE_SAVE_ALL	Zapisz wszystko
+ZamknijIDH_MENU_FILE_CLOSE	Zamknij
+Zamknij wszystkoIDH_MENU_FILE_CLOSE_ALL	Zamknij wszystko
+ZakończIDH_MENU_FILE_EXIT	Zakończ
+
+
+#$K
+Polecenie Plik|Nowy 
+
+Wybierz z menu polecenie Plik|Nowy w celu rozpoczęcia nowego tłumaczenia. Okno tekstu źródłowego zostanie wyczyszczone.
+
+
+#$K
+Polecenie Plik|Otwórz tekst źródłowy 
+
+Wybierz z menu polecenie Plik|Otwórz tekst źródłowy w celu otwarcia okna dialogowego Otwórz tekst źródłowy.
+Okno dialogowe Otwórz tekst źródłowy pozwala na wybór pliku i wczytanie go do okna źródłowego.
+
+Okno dialogowe Otwórz plik źródłowy
+
+Szukaj w	Wyświetla katalog bieżący. Użyj listy rozwijalnej, aby wybrać inny dysk lub katalog.
+
+Pliki	Wyświetla pliki z katalogu bieżącego, które pasują do wzorca z pola Nazwa pliku lub Pliki typu.
+
+Nazwa pliku	Wpisz nazwę pliku, który chcesz wczytać lub wpisz wzorzec, żeby wyświetlić pliki o nazwie zgodnej z wzorcem.
+
+Pliki typu	Wybierz wzorzec plików, które mają być wyświetlane w liście plików.
+
+Przejdź do ostatnio
+odwiedzanego
+katalogu	Naciśnij ten przycisk, by wrócić do poprzedniego katalogu bieżącego.
+
+Do góry o jeden
+poziom	Naciśnij ten przycisk, żeby przejść do katalogu nadrzędnego.
+
+Utwórz nowy folder	Naciśnij ten przycisk, żeby utworzyć nowy katalog jako katalog podrzędny do bieżącego.
+
+Menu Widok	Naciśnij ten przycisk, żeby zmienić sposób wyświetlania plików.
+
+
+#$K
+Polecenie Plik|Otwórz ponownie
+
+Wybierz z menu polecenie Plik|Otwórz ponownie  w celu otwarcia jednego z ostatnio otwieranych plików tekstu źródłowego.
+
+
+#$K
+Polecenie Plik|Zapisz tekst źródłowy 
+
+Wybierz z menu polecenie Plik|Zapisz tekst źródłowy w celu zapisania zmian dokonanych w tekście w oknie źródłowym.
+Jeżeli plik nie był jeszcze zapisywany, to otworzy się okienko dialogowe Zapisywanie jakoIDH_MENU_FILE_SAVE_SOURCE_AS, które pozwoli na wprowadzenie nazwy pliku.
+
+
+#$K
+Polecenie Plik|Zapisz tekst źródłowy jako
+
+Wybierz z menu polecenie Plik|Zapisz tekst źródłowy jako w celu zapisania tekstu zawartego w oknie źródłowym do pliku.
+Okno dialogowe Zapisz tekst źródłowy pozwala na wpisanie lub wybór nazwy pliku, do którego ma zostać zapisany tekst.
+
+Okno dialogowe Zapisz tekst źródłowy
+
+Zapisz w	Wyświetla katalog bieżący. Użyj listy rozwijalnej, aby wybrać inny dysk lub katalog.
+
+Pliki	Wyświetla pliki z katalogu bieżącego, które pasują do wzorca z pola Nazwa pliku lub Zapisz jako typ.
+
+Nazwa pliku	Wpisz nazwę pliku, który chcesz wczytać lub wpisz wzorzec, żeby wyświetlić według niego pliki.
+
+Zapisz jako typ	Wybierz wzorzec plików, które mają być wyświetlane w liście plików.
+
+Przejdź do ostatnio
+odwiedzanego
+katalogu	Naciśnij ten przycisk, by wrócić do poprzedniego katalogu bieżącego.
+
+Do góry o jeden
+poziom	Naciśnij ten przycisk, żeby przejść do katalogu nadrzędnego.
+
+Utwórz nowy folder	Naciśnij ten przycisk, żeby utworzyć nowy katalog jako katalog podrzędny do bieżącego.
+
+Menu Widok	Naciśnij ten przycisk, żeby zmienić sposób wyświetlania plików.
+
+
+#$K
+Polecenie Plik|Zapisz tekst docelowy 
+
+Wybierz z menu polecenie Plik|Zapisz tekst docelowy w celu zapisania zmian dokonanych w tekście w oknie docelowym.
+Jeżeli plik nie był jeszcze zapisywany, to otworzy się okienko dialogowe Zapisywanie jakoIDH_MENU_FILE_SAVE_DESTINATION_AS, które pozwoli na wprowadzenie nazwy pliku.
+
+
+#$K
+Polecenie Plik|Zapisz tekst docelowy jako
+
+Wybierz z menu polecenie Plik|Zapisz tekst docelowy jako w celu zapisania tekstu zawartego w oknie docelowym do pliku.
+Okno dialogowe Zapisz tekst docelowy jako pozwala na wpisanie lub wybór nazwy pliku, do którego ma zostać zapisany tekst.
+
+Okno dialogowe Zapisz tekst docelowy
+
+Zapisz w	Wyświetla katalog bieżący. Użyj listy rozwijalnej, aby wybrać inny dysk lub katalog.
+
+Pliki	Wyświetla pliki z katalogu bieżącego, które pasują do wzorca z pola Nazwa pliku lub Zapisz jako typ.
+
+Nazwa pliku	Wpisz nazwę pliku, który chcesz wczytać lub wpisz wzorzec, żeby wyświetlić pliki o nazwie zgodnej z wzorcem.
+
+Zapisz jako typ	Wybierz wzorzec plików, które mają być wyświetlane w liście plików.
+
+Przejdź do ostatnio
+odwiedzanego
+katalogu	Naciśnij ten przycisk, by wrócić do poprzedniego katalogu bieżącego.
+
+Do góry o jeden
+poziom	Naciśnij ten przycisk, żeby przejść do katalogu nadrzędnego.
+
+Utwórz nowy folder	Naciśnij ten przycisk, żeby utworzyć nowy katalog jako katalog podrzędny do bieżącego.
+
+Menu Widok	Naciśnij ten przycisk, żeby zmienić sposób wyświetlania plików.
+
+
+#$K
+Polecenie Plik|Zapisz oba 
+Wybierz z menu polecenie Plik|Zapisz oba w celu zapisania tekstów z okien źródłowego i docelowego. Jeżeli któryś tekst nie był jeszcze zapisywany, otworzy się okno dialogowe Zapisz odpowiednio dla tekstu źródłowegoIDH_MENU_FILE_SAVE_SOURCE_AS lub/i docelowegoIDH_MENU_FILE_SAVE_DESTINATION_AS.
+
+
+#$K
+Polecenie Plik|Zapisz wszystko 
+
+Wybierz z menu polecenie Plik|Zapisz wszystko w celu zapisania tekstów wszystkich zakładek z okien źródłowego i docelowego. Jeżeli któryś tekst nie był jeszcze zapisywany, otworzy się okno dialogowe Zapisz odpowiednio dla tekstu źródłowegoIDH_MENU_FILE_SAVE_SOURCE_AS lub/i docelowegoIDH_MENU_FILE_SAVE_DESTINATION_AS.
+
+
+#$K
+Polecenie Plik|Zamknij 
+Wybierz z menu polecenie Plik|Zamknij, aby zamknąć aktywną zakładkę edytora.
+
+
+#$K
+Polecenie Plik|Zamknij wszystko 
+Wybierz z menu polecenie Plik|Zamknij wszystko, aby zamknąć wszystkie zakładki edytora.
+
+#$K
+Polecenie Plik|Zakończ
+
+Wybierz z menu polecenie Plik|Zakończ w celu zakończenia pracy z edytorem programu TRANSLATICA.
+
+
+#$K
+Menu Edycja
+
+Wybierz menu Edycja w celu wykonania podstawowych operacji edycyjnych pozwalających na kopiowanie, wklejanie i wycinanie zaznaczonych fragmentów tekstów.
+
+CofnijIDH_MENU_EDIT_UNDO	Cofnij
+PonówIDH_MENU_EDIT_REDO	Ponów
+WytnijIDH_MENU_EDIT_CUT	Wytnij
+KopiujIDH_MENU_EDIT_COPY	Kopiuj
+WklejIDH_MENU_EDIT_PASTE	Wklej
+UsuńIDH_MENU_EDIT_DELETE	Usuń
+Zaznacz wszystkoIDH_MENU_EDIT_SELECT_ALL	Zaznacz wszystko
+ZnajdźIDH_MENU_EDIT_FIND	Znajdź
+ZamieńIDH_MENU_EDIT_REPLACE	Zamień
+Znajdź następnyIDH_MENU_EDIT_FIND_NEXT	Znajdź następny
+
+
+#$K
+Polecenie Edycja|Cofnij 
+
+Wybierz z menu polecenie Edycja|Cofnij w celu cofnięcia ostatnio dokonanej operacji edycyjnej w oknie źródłowym lub docelowym.
+
+
+#$K
+Polecenie Edycja|Ponów 
+
+Wybierz z menu polecenie Edycja|Ponów w celu ponownego wykonania ostatnio użytej operacji edycyjnej w oknie źródłowym lub docelowym.
+
+
+#$K
+Polecenie Edycja|Wytnij 
+
+Wybierz z menu polecenie Edycja|Wytnij w celu przeniesienia do schowka zaznaczonego fragmentu tekstu.
+
+
+#$K
+Polecenie Edycja|Kopiuj 
+
+Wybierz z menu polecenie Edycja|Kopiuj w celu skopiowania zaznaczonego fragmentu tekstu do schowka.
+
+
+#$K
+Polecenie Edycja|Wklej 
+
+Wybierz z menu polecenie Edycja|Wklej w celu wklejenia tekstu zawartego w schowku.na pozycji, w której ustawiony jest kursor edycyjny.
+
+
+#$K
+Polecenie Edycja|Usuń 
+
+Wybierz z menu polecenie Edycja|Usuń w celu usunięcia zaznaczonego fragmentu tekstu.
+
+
+#$K
+Polecenie Edycja|Zaznacz wszystko
+
+Wybierz z menu polecenie Edycja|Zaznacz wszystko w celu zaznaczenia całego tekstu.
+
+
+#$K
+Polecenie Edycja|Znajdź 
+W celu znalezienia w bieżącym oknie Edytora określonego wyraz lub frazy, wybierz polecenie Edycja|Znajdź.
+Okno dialogowe Znajdź pozwala na wpisanie szukanego wyrazu lub frazy wyrazowej oraz określenie opcji wyszukiwania.
+
+Okno dialogowe Znajdź
+
+Szukany tekst	Wpisz tekst do wyszukania.
+
+Opcje | Uwzględniaj
+wielkość liter	Zaznacz opcję, jeżeli dopasowanie tekstu ma uwzględniać wielkość liter.
+
+Kierunek | W przód/W tył	Zaznacz odpowiednią opcję, jeżeli wyszukiwanie ma się odbywać na tekście znajdującym się przed/za bieżącą pozycją kursora.
+
+#$K
+Polecenie Edycja|Zamień 
+W celu zamiany określonego tekstu na inny, wybierz polecenie Edycja|Zamień.
+Okno dialogowe Zamień pozwala na wpisanie tekstu do zastąpienia oraz tekstu, który ma być wpisany.
+
+Okno dialogowe Zamień
+
+Szukany tekst	Wpisz tekst, który ma być wyszukany i zastąpiony.
+
+Zamień na	Wpisz tekst, którym ma być zastąpiony tekst szukany.
+
+Opcje | Uwzględniaj
+wielkość liter	Zaznacz opcję, jeżeli dopasowanie tekstu ma uwzględniać wielkość liter.
+
+Kierunek | W przód/W tył	Zaznacz odpowiednią opcję, jeżeli wyszukiwanie ma się odbywać na tekście znajdującym się przed/za bieżącą pozycją kursora.
+
+Pomiń	Kliknij przycisk, jeżeli dane wystąpienie tekstu ma być pominięte.
+
+Zamień wszystko	Kliknij przycisk, jeżeli wszystkie znalezione wystąpienia tekstu mają być zamienione
+
+
+#$K
+Polecenie Edycja|Znajdź następny 
+Po włączeniu procesu wyszukiwania tekstu wybierz polecenie Edycja|Znajdź następny, żeby wyszukać kolejne wystąpienie podanego tekstu.
+
+
+#$K
+Menu Widok
+
+Wybierz menu Widok w celu dostosowania wyglądu programu.
+
+Granice wyrazówIDH_MENU_VIEW_SOURCE_TOKENS
+tekstu źródłowegoIDH_MENU_VIEW_SOURCE_TOKENS	Pokaż/Ukryj granice wyrazów tekstu źródłowego
+
+Wyrazy nieznaneIDH_MENU_VIEW_SOURCE_UNKNOWN
+tekstu źródłowegoIDH_MENU_VIEW_SOURCE_UNKNOWN	Włącz/wyłącz zaznaczenie wyrazów nieznanych w tekście źródłowym
+
+Granice wyrazówIDH_MENU_VIEW_TARGET_TOKENS
+tekstu docelowegoIDH_MENU_VIEW_TARGET_TOKENS	Pokaż/Ukryj granice wyrazów tekstu docelowego
+
+Wyrazy nieznaneIDH_MENU_VIEW_TARGET_UNKNOWN
+tekstu docelowegoIDH_MENU_VIEW_TARGET_UNKNOWN	Włącz/wyłącz zaznaczenie wyrazów nieznanych w tekście źródłowym
+
+Okno źródłoweIDH_MENU_VIEW_SOURCE	Okno źródłowe
+
+Okno doceloweIDH_MENU_VIEW_DESTINATION	Okno docelowe
+
+Ustawienie poziomeIDH_MENU_VIEW_HORIZONTAL	Ustawienie poziome
+
+Ustawienie pionoweIDH_MENU_VIEW_VERTICAL	Ustawienie pionowe
+
+Pasek narzędziIDH_MENU_VIEW_TOOLBAR	Pasek narzędzi
+
+Pasek stanuIDH_MENU_VIEW_STATUSBAR	Pasek stanu
+
+CzcionkaIDH_MENU_VIEW_FONT	Wybór czcionki
+
+
+#$K
+Polecenie Widok|Granice wyrazów tekstu źródłowego 
+
+Wybierz z menu polecenie Widok|Granice wyrazów tekstu źródłowego w celu pokazania lub ukrycia granic wyrazów w tekście źródłowym. Granice te są oznaczone znacznikami w kolorze niebieskim. Znaczniki kończące zdanie są dodatkowo oznaczane kropką.
+
+
+#$K
+Polecenie Widok|Granice wyrazów tekstu docelowego 
+
+Wybierz z menu polecenie Widok|Granice wyrazów tekstu docelowego w celu pokazania lub ukrycia granic wyrazów w tekście przetłumaczonym. Granice te są oznaczone znacznikami w kolorze niebieskim. Znaczniki kończące zdanie są dodatkowo oznaczane kropką.
+
+
+#$K
+Polecenie Widok|Wyrazy nieznane tekstu źródłowego 
+
+Wybierz z menu polecenie Widok|Wyrazy nieznane tekstu źródłowego w celu oznaczenia wyrazów w tekście źródłowym, które nie zostały rozpoznane przez Analizator tekstu. Wyrazy te są podkreślone żółtą linią. Wyrazy oznaczone w ten sposób nie są tłumaczone, lecz przenoszone do tekstu docelowego.
+
+
+#$K
+Polecenie Widok|Wyrazy nieznane tekstu docelowego 
+
+Wybierz z menu polecenie Widok|Wyrazy nieznane tekstu docelowego w celu oznaczenia wyrazów w przetłumaczonym tekście, które nie zostały rozpoznane przez Analizator tekstu. Wyrazy te są podkreślone żółtą linią.
+
+
+#$K
+Polecenie Widok|Ustawienie poziome 
+
+Wybierz z menu polecenie Widok|Ustawienie poziome w celu poziomego (jedno nad drugim) ustawienia okien źródłowego i docelowego.
+
+
+#$K
+Polecenie Widok|Ustawienie pionowe 
+
+Wybierz z menu polecenie Widok|Ustawienie pionowe w celu pionowego (jedno obok drugiego) ustawienia okien źródłowego i docelowego. Ustawienie to pozwala na łatwiejsze porównywanie tekstu źródłowego i docelowego.
+
+
+#$K
+Polecenie Widok|Okno źródłowe 
+
+Wybierz z menu polecenie Widok|Okno źródłowe w celu pokazania lub ukrycia okna z tekstem źródłowym. W przypadku, gdy chcemy ukryć okno źródłowe, a okno docelowe jest także ukryte, pokaże się okno docelowe (co najmniej jedno okno musi być widoczne).
+
+
+#$K
+Polecenie Widok|Okno docelowe 
+
+Wybierz z menu polecenie Widok|Okno docelowe w celu pokazania lub ukrycia okna z tekstem docelowym. W przypadku, gdy chcemy ukryć okno docelowe, a okno źródłowe jest także ukryte, pokaże się okno źródłowe (co najmniej jedno okno musi być widoczne).
+
+
+#$K
+Polecenie Widok|Pasek narzędzi
+
+Wybierz z menu polecenie Widok|Pasek narzędzi w celu pokazania lub ukrycia paska narzędzi (u góry okna aplikacji).
+
+
+#$K
+Polecenie Widok|Pasek stanu
+
+Wybierz z menu polecenie Widok|Pasek stanu w celu pokazania lub ukrycia paska stanu (u dołu okna programu).
+Pasek stanu podaje podstawowe informacje o edytowanym tekście: pozycję kursora i aktualny kontekst.
+
+
+#$K
+Polecenie Widok|Czcionka
+
+Wybierz z menu polecenie Widok|Czcionka w celu zmiany kroju i wielkości czcionki w oknach edycyjnych.
+
+
+#$K
+Menu Tłumacz
+
+Wybierz menu Tłumacz w celu uruchomienia poleceń związanych z tłumaczeniem.
+
+TłumaczIDH_MENU_TRANSLATION_TRANSLATE	Tłumacz
+Polsko-AngielskieIDH_MENU_TRANSLATION_PLEN	Polsko-Angielskie
+Angielsko-PolskieIDH_MENU_TRANSLATION_ENPL	Angielsko-Polskie
+UstawieniaIDH_MENU_TRANSLATION_SETTINGS	Ustawienia
+
+
+#$K
+Polecenie Tłumacz|Tłumacz 
+
+Wybierz z menu polecenie Tłumacz|Tłumacz w celu przetłumaczenia tekstu.
+
+Jeżeli pewien fragment tekstu w oknie źródłowym jest zaznaczony, wówczas tłumaczony jest tylko zaznaczony fragment. W przeciwnym przypadku tłumaczony jest cały tekst z okna źródłowego.
+Przetłumaczony tekst umieszczany jest w oknie docelowym. Poprzednia zawartość okna docelowego jest usuwana.
+
+Jeżeli tłumaczony jest dłuższy fragment tekstu, to podczas tłumaczenia pokazywane jest okno postępu tłumaczenia. Tłumaczenie można wówczas przerwać wciskając przycisk Anuluj w oknie postępu tłumaczenia.
+
+Okno postępu tłumaczenia zawiera następujące pola:
+
+Zdania	Podaje ilość przetłumaczonych zdań tekstu.
+
+Wyrazy	Podaje ilość przetłumaczonych wyrazów.
+
+Tłumaczonych	Podaje ilość zdań, które zostały przetłumaczone.
+
+Skopiowanych	Podaje ilość zdań, które zostały przeniesione z tekstu źródłowego do docelowego.
+
+Kontekst	Podaje aktualny kontekst tłumaczonego tekstu.
+
+Zamknij okno po
+zakończeniu	Jeśli pole jest zaznaczone, okno postępu tłumaczenia zostanie zamknięte po zakończeniu tłumaczenia. W przeciwnym przypadku okno należy zamknąć wciskając przycisk Zamknij.
+
+
+#$K
+Polecenie Tłumacz|Polsko-Angielskie 
+
+Wybierz z menu polecenie Tłumacz|Polsko-Angielskie w celu ustawienia kierunku tłumaczenia na kierunek z języka polskiego na język angielski.
+Po zmianie kierunku tłumaczenia, jeżeli włączona jest analizaIDH_MENU_TOOLS_ANALYSE tekstu, tekst w oknie źródłowym zostanie ponownie przeanalizowany.
+
+
+#$K
+Polecenie Tłumacz|Angielsko-Polskie 
+
+Wybierz z menu polecenie Tłumacz|Angielsko-Polskie w celu ustawienia kierunku tłumaczenia na kierunek z języka angielskiego na język polski.
+Po zmianie kierunku tłumaczenia, jeżeli włączona jest analizaIDH_MENU_TOOLS_ANALYSE tekstu, tekst w oknie źródłowym zostanie ponownie przeanalizowany.
+
+
+#$K
+Polecenie Tłumaczenie|Ustawienia 
+
+Wybierz z menu polecenie Tłumaczenie|Ustawienia w celu ustawienia opcji tłumaczenia. Do opcji tych należą: konteksty, słowniki oraz wyrazy nietłumaczone.
+
+
+Zakładka Konteksty
+
+Wybierz zakładkę Konteksty w celu ustawienia kontekstu tłumaczenia. Ustawienie kontekstu wpływa na sposób tłumaczenia wyrazu.
+
+W wyniku wybrania polecenia pojawi się okno pozwalające na wybór kontekstu w następujących kategoriach:
+• Dziedziny – zawiera konteksty tematyczne opisujące dziedziny wiedzy
+• Style – zawiera konteksty określające styl tłumaczonego tekstu
+• Dialekty – zawiera konteksty określające wariant języka angielskiego
+
+
+Zakładka Słowniki
+
+Wybierz zakładkę Słowniki w celu określenia, z jakich słowników system ma pobierać informacje o tłumaczeniu poszczególnych wyrazów i fraz. Dostępne są następujące słowniki:
+• Lokalny użytkownika – budowany w trakcie użytkowania systemu
+• Systemowy – dołączany do systemu
+
+
+Zakładka Wyrazy nietłumaczone
+
+Wybierz zakładkę Wyrazy nietłumaczone, aby przeglądać i edytować listę wyrazów i form wyrazowych wyjętych z tłumaczenia.
+
+Przycisk Usuń	Kliknij przycisk usuń, aby usunąć wybrany wyraz z listy wyrazów nietłumaczonych
+
+Przycisk Zaznacz/Odznacz	Kliknij przycisk, aby zaznaczyć/odznaczyć wybrany wyraz jako wyraz nietłumaczony
+
+Wyświetlaj okno wyboru
+lokalnie/globalnie	Zaznacz opcję, jeżeli przy dodawaniu wyrazu do listy wyrazów nietłumaczonych ma być wyświetlane okno globalnego lub lokalnego wyłączenia wyrazu z tłumaczenia
+
+
+#$K
+Menu Narzędzia
+
+Wybierz menu Narzędzia w celu uaktywnienia dodatkowych możliwości programu TRANSLATICA.
+
+Analizuj tekst źródłowyIDH_MENU_TOOLS_ANALYSE	Analizuj tekst
+Sprawdzaj pisownięIDH_MENU_TOOLS_SPELLCHECKING	Sprawdzaj pisownię
+Generuj wariantyIDH_MENU_TOOLS_VARIANTS	Pokaż/Ukryj warianty
+Generuj drzewa składnioweIDH_MENU_TOOLS_SYNTAX_TREE	Generuj drzewa składniowe
+SłownikIDH_MENU_TOOLS_DICTIONARY	Słownik
+WypowiedzIDH_MENU_TOOLS_SPEAK	Wypowiedz tekst
+SłuchajIDH_MENU_TOOLS_DICTATE	Słuchaj
+Kompilator danych korporacyjnychIDH_DATA_COMPILER	Kompilator danych korporacyjnych
+Słownik PWN-OxfordIDH_PWN_DICTIONARY	Słownik PWN-Oxford
+Język programuIDH_MENU_TOOLS_APPLICATION_LANGUAGE	Język programu
+
+
+#$K
+Polecenie Narzędzia|Analizuj tekst źródłowy 
+
+Wybierz z menu polecenie Narzędzia|Analizuj tekst źródłowy w celu włączenia lub wyłączenia automatycznej analizy tekstu źródłowego.
+
+Podczas analizy rozpoznawane są pojedyncze wyrazy, wyrazy złożone oraz zdania. Ponadto przy włączonej opcji Sprawdzaj pisownięIDH_MENU_TOOLS_SPELLCHECKING sprawdzana jest poprawność wyrazów.
+
+Podczas analizy dłuższych fragmentów tekstu pojawia się okno Analiza tekstu zawierające następujące pola:
+
+Zdania	Podaje liczbę przeanalizowanych zdań.
+
+Wyrazy	Podaje liczbę rozpoznanych wyrazów.
+
+Błędy	Podaje liczbę wyrazów błędnych.
+
+Nieznane	Podaje liczbę wyrazów nieznanych.
+
+Zamknij po
+zakończeniu	Jeśli pole jest zaznaczone, okno analizy zostanie zamknięte po zakończeniu analizy. W przeciwnym przypadku okno należy zamknąć wciskając przycisk Zamknij.
+
+Anuluj	Przycisk pozwala na przerwanie analizy tekstu źródłowego.
+
+
+#$K
+Polecenie Narzędzia|Sprawdzaj pisownię 
+
+Wybierz z menu polecenie Narzędzia|Sprawdzaj pisownię w celu włączenia lub wyłączenia sprawdzania poprawności ortograficznej wyrazów w tekście źródłowym. Wyrazy błędne są podkreślone czerwoną linią falistą. Jeżeli wyraz zostanie uznany przez system za błędny, wówczas możliwy jest wybór wyrazu spośród podpowiedzi wygenerowanych przez system. Podpowiedzi pojawiają się po kliknięciu na wyrazie prawym przyciskiem myszy.
+
+
+#$K
+Polecenie Narzędzia|Generuj warianty 
+
+Wybierz z menu polecenie Narzędzia|Generuj warianty w celu tłumaczenia z możliwością wyboru wariantów (alternatywnych tłumaczeń). Wyrazy, dla których istnieje możliwość wyboru wariantów, są w oknie docelowym podkreślone szarą przerywaną linią.
+
+
+#$K
+Polecenie Narzędzia|Generuj drzewa składniowe 
+
+Wybierz z menu polecenie Narzędzia|Generuj drzewa składniowe w celu przetłumaczenia zaznaczonego fragmentu tekstu lub całego tekstu z włączoną opcją pokazywania drzew składniowych.
+Po zakończeniu tłumaczenia zostaje wyświetlone okno struktury składniowej pozwalające na obejrzenie struktury zdań w języku źródłowym i docelowym.
+Podczas tłumaczenia dłuższego tekstu wyświetlane jest okno postępu tłumaczenia.
+
+
+#$K
+Polecenie Narzędzia|Słownik 
+
+Wybierz z menu polecenie Narzędzia|Słownik w celu uruchomienia przeglądarki słownika.
+
+
+#$K
+Polecenie Narzędzia|Wypowiedz 
+Wybierz z menu polecenie Narzędzia|Wypowiedz w celu odczytania tekstu w języku angielskim.
+
+
+#$K
+Polecenie Narzędzia|Słuchaj 
+Wybierz z menu polecenie Narzędzia|Słuchaj w celu podyktowania tekstu w języku angielskim.
+
+
+#$K
+Polecenie Narzędzia|Kompilator danych korporacyjnych 
+
+Wybierz z menu polecenie Narzędzia|Kompilator danych korporacyjnych aby uruchomić kompilator Bazy tłumaczeń firmyIDH_CORP_DATA. W wyniku jego działania powstaje plik msi, uruchomienie którego powoduje zainstalowanie Bazy tłumaczeń firmyIDH_CORP_DATA.
+
+Okno kompilatora danych korporacyjnych ma następujące pola:
+Plik wejściowy	Wpisz nazwę pliku Bazy tłumaczeń firmy.
+
+Ścieżka wyjściowa	Wpisz lokalizację istniejącego katalogu, w którym tworzone będą plik wynikowy msi oraz wszystkie inne pliki potrzebne do jego utworzenia.
+
+Wersja	Wpisz wersję pliku instalacyjnego msi.
+
+Przycisk Kompilacja	Wciśnij przycisk, aby uruchomić proces kompilacji podanego pliku Bazy tłumaczeń firmy.
+
+Przycisk Tworzenie MSI	Wciśnij przycisk, aby uruchomić proces tworzenia pliku instalacyjnego z plików powstałych podczas kompilacji.
+
+Komunikaty	Okno wyświetlające komunikaty kompilacji i tworzenia pliku msi
+
+Uwaga: Do utworzenia MSI  niezbędne jest zainstalowanie .Net Framework (w wersji 1.1. lub nowszej). W razie potrzeby plik instalacyjny można znaleźć na stronie microsoft.com*!EF(‘www.microsoft.com’). 
+
+
+#$K
+Polecenie Narzędzia|Słownik PWN-Oxford 
+
+Wybierz z menu polecenie Narzędzia|Słownik PWN-Oxford aby uruchomić słownik PWN-Oxford, jeżeli jest zainstalowany na komputerze.
+
+
+#$K
+Polecenie Narzędzia|Język programu
+
+Wybierz z menu polecenie Narzędzia|Język programu w celu zmiany języka interfejsu użytkownika.
+
+
+#$K
+Menu Pomoc
+
+Wybierz menu Pomoc w celu wyświetlenia pomocy programu lub wyświetlenia informacji o programie Translatica.
+
+Pomoc programu TranslaticaIDH_MENU_HELP_TRANSLATICA_HELP		Pomoc programu Translatica
+O programieIDH_MENU_HELP_ABOUT			O programie
+
+
+#$K
+Polecenie Pomoc|Pomoc programu Translatica 
+
+Wybierz z menu polecenie Pomoc|Pomoc programu Translatica w celu uruchomienia systemu pomocy programu.
+
+
+#$K
+Polecenie Pomoc|O programie
+
+Wybierz z menu polecenie Pomoc|O programie w celu wyświetlenia informacji o programie TRANSLATICA.
+
+
+#$
+Pamięć tłumaczeń i słownik firmy
+
+Tłumaczenie zdań w sposób zadany przez użytkowników systemu jest realizowane przy pomocy Pamięci tłumaczeń. Pamięć tłumaczeń może zawierać praktycznie nieograniczoną liczbę zdań, które w obrębie danej instytucji powinny być zawsze tłumaczone w jeden określony sposób (przykładem zastosowania mogą być teksty na wszelkiego rodzaju formularzach). Gdy w zadanym do tłumaczenia tekście system napotka na zdanie, które znajduje się w Pamięci tłumaczeń, to proces automatycznego tłumaczenia zostanie zaniechany, a pobrany zostanie tekst tłumaczenia z Pamięci tłumaczeń. Należy zauważyć, że system nie szuka w Pamięci tłumaczeń zdań podobnych do danego lecz identycznych.
+Słownik firmy może zawierać wyrazy oraz frazy kilkuwyrazowe, które mają być w obrębie firmy tłumaczone w pewien określony sposób, niezależnie od formy w jakiej występują. Jeśli na przykład pewien bank zażyczy sobie, aby w swoich dokumentach tłumaczeniem frazy pożyczka długoterminowa było long-period loan (a nie jak w słowniku systemu TRANSLATICA long-term loan), to w taki sposób tłumaczone będą wszelkie wystąpienia tej frazy we wszystkich odmianach (np. pożyczki długoterminowej) – również wewnątrz 
+
+Dla ułatwienia, zdania z Pamięci tłumaczeń i frazy ze Słownika firmy są przechowywane w jednym pliku, zwanym dalej Bazą tłumaczeń firmy.
+Baza tłumaczeń firmy powinna zawierać wyrazy, frazy lub zdania w języku źródłowym i docelowym z określeniem sposobu i kierunku tłumaczenia. Plik ten może być stosowany w dwóch formatach: tzw. prostym oraz w formacie XML. 
+
+Format prosty zakłada, że kolejne wiersze składają się z następujących elementów rozdzielonych znakami tabulacji:
+Czy fraza	wartość logiczna określająca, czy podane hasło jest frazą, która ma być odmieniana i odszukiwana wewnątrz zdań (czyli elementem Słownika firmy), czy też zdaniem (elementem Pamięci tłumaczeń). Dopuszczalne wartości:
+       yes (lub tak lub1) dla frazy
+       no (lub nie lub 0) dla zdania.
+
+Kierunek	określa kierunek tłumaczenia, który ma być stosowany dla podanej pary fraz. Możliwe wartości to:
+       “>” – tłumaczenie tylko w kierunku polsko-angielskim
+       “<” – tłumaczenie tylko w kierunku angielsko-polskim
+       “<>” (lub napis pusty) – tłumaczenie w obu kierunkach
+
+Fraza 1	tekst w języku polskim
+
+Fraza 2	tekst w języku angielskim.
+
+Plik pamięci tłumaczeń w formacie prostym można łatwo uzyskać z pliku formatu .xls . Jeśli kolejne elementy opisu hasła podane są w kolejnych kolumnach, to format prosty uzyskuje się poprzez Zapisz jako Tekst (rozdzielany znakami tabulacji).
+
+Przykład pliku w formacie prostym:
+
+no	<	Być, albo nie być – oto jest pytanie.	To be, or not to be: that is the question.
+no	<>	Drogi Kliencie.	Dear customer.
+yes	>	Biały Dom	White House
+
+Plik pamięci tłumaczeń w formacie XML powinien być zgodny ze schematem zawartym w pliku bin/win/enterprise_data.xsd.
+
+Przykład pliku formacie XML:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<segments>
+  <segment id="1" multiway="false”>
+    <sentence lang="en">To be, or not to be: that is the question.</sentence>
+    <sentence lang="pl">Być, albo nie być – oto jest pytanie.</sentence>
+  </segment>
+  <segment id = “2” multiway="true">
+    <sentence lang="pl">Drogi Kliencie.</sentence>
+    <sentence lang="en">Dear customer.</sentence>
+  </segment>
+  <segment id="3" multiway="false”>
+    <phrase lang="pl">Biały Dom</phrase>
+    <phrase lang="en">White House</phrase>
+  </segment>
+</segments>
+
+
+#$K
+Batcher
+
+System TRANSLATICA daje możliwość przetwarzania wsadowego dokumentów aplikacji MS Word, MS Excel oraz MS PowerPoint, czyli tłumaczenia wielu plików bez konieczności uprzedniego otwierania ich przez użytkownika. Do przetwarzania wsadowego służy program Batcher uruchamiany z menu Start: Start -> Translatica Enterprise/Office+ -> Batcher.
+
+
+
+Kolejne przyciski mają następujące funkcje:
+Dodaj	Wyświetla okno dialogowe służące do wybrania jednego lub wielu plików, które mają być przetłumaczone.
+
+Usuń	Usuwa zaznaczony plik z listy plików do tłumaczenia.
+
+Resetuj	Usuwa wszystkie pliki z listy plików do tłumaczenia.
+
+Opcje	Wyświetla okno ustawień tłumaczenia dla danego pliku (patrz UstawieniaIDH_MENU_TRANSLATION_SETTINGS).
+
+ lub 	Zmienia kierunek tłumaczenia; symbol flagi określa język docelowy tłumaczenia.
+
+Tłumacz	Rozpoczyna proces tłumaczenia.
+
+Anuluj	Kończy pracę programu.
+
+W oknie głównym programu Batcher wyświetlane jest drzewo z listą plików przeznaczonych do tłumaczenia, przy czym każdy z nich wyświetlany jest pod nazwą aplikacji, z którą jest skojarzony. Jeżeli któryś ze składników pakietu MS Office nie jest zainstalowany lub nie został zintegrowany, wówczas przy jego nazwie pojawia się symbol .
+
+Po dodaniu nowych plików, przy każdym z nich wyświetlony zostaje symbol  lub  określający język źródłowy pliku.
+
+Bezpośrednio po uruchomieniu procesu tłumaczenia wyświetlone zostaje okno dialogowe służące do określenia katalogu docelowego, w którym mają być umiejscowione przetłumaczone dokumenty.
+
+Po ukończeniu tłumaczenia przy nazwie każdego z tłumaczonych plików powinien pojawić się symbol flagi języka określonego jako docelowy. Wyświetlenie symbolu  lub  oznacza, że tłumaczenie danego pliku zakończyło się niepowodzeniem.
+
+Po skończonym procesie tłumaczenia, po zaznaczeniu nazwy tłumaczonego dokumentu, na pasku stanu wypisywana jest ścieżka dostępu do odpowiadającego mu dokumentu już przetłumaczonego.
+
+
+#$K
+Updater
+
+System TRANSLATICA wyposażony jest w program Updater umożliwiający automatyczną aktualizację przez Internet. Program ten można uruchomić wybierając polecenie z menu Start: Start -> Translatica X -> Updater. Jeżeli jest dostępna aktualizacja dla używanej wersji systemu, wówczas pojawi się okienko powiadamiające. Jednocześnie użytkownik proszony jest o potwierdzenie przeprowadzenia aktualizacji:
+
+
+
+Kolejne przyciski mają następujące funkcje:
+Tak	Rozpocznij pobieranie i instalację aktualizacji.
+
+Nie	Pomiń tę wersję aktualizacji.
+
+Opcje	Pokaż/ukryj opcje aktualizacji.
+
+Aktualizuj automatycznie	Uruchamiaj aktualizację przy starcie systemu TRANSLATICA.
+
+Informuj o aktualizacjach	Wyświetlaj informację o nowej aktualizacji i pytaj o jej zainstalowanie.
+
+Wyłącz automatyczną aktualizację	Pozwól na uruchamianie aktualizacji tylko przez użytkownika.
+
+Zastosuj	Zastosuj zmiany dokonane w opcjach.
+
+# IDH_ABOUT_MT
+$ Kilka słów o tłumaczeniu automatycznym
+# IDH_CHARACTERIZATION
+$ Charakterystyka systemu TRANSLATICA
+# IDH_LOCAL_INSTALLATION
+$ Instalacja lokalna
+# IDH_NET_INSTALLATION
+$ Instalacja przez sieć
+# IDH_VERSIONS
+$ Wersje programu
+# IDH_INTEGRATOR
+$ Integrator
+# IDH_LANGUAGE_VERSIONS
+$ Wersje językowe
+# IDH_MS_INTERNET_EXPLORER
+$ Tłumaczenie w programie Microsoft Internet Explorer
+# IDH_MOZILLA
+$ Tłumaczenie w programie Mozilla
+# IDH_OUTLOOK_EXPRESS
+$ Tłumaczenie w programie Outlook Express
+# IDH_MS_WORD_AND_EXCEL
+$ Tłumaczenie w programach Microsoft Word i Microsoft Excel
+# IDH_MS_POWERPOINT
+$ Tłumaczenie w programie Microsoft PowerPoint
+# IDH_MS_OUTLOOK
+$ Tłumaczenie w programie Microsoft Outlook
+# IDH_OO_WRITER
+$ Tłumaczenie w programie Writer
+# IDH_EDITOR
+$ Tłumaczenie w edytorze translacji
+# IDH_MENU
+$ Menu programu TRANSLATICA
+K menu programu
+# IDH_MENU_FILE
+$ Menu Plik
+K Plik, menu
+# IDH_MENU_FILE_NEW
+$ Polecenie Plik|Nowy
+K Nowy, polecenie
+# IDH_MENU_FILE_OPEN
+$ Polecenie Plik|Otwórz
+K Otwórz, polecenie
+# IDH_MENU_FILE_REOPEN
+$ Polecenie Plik|Otwórz ponownie
+K Otwórz ponownie, polecenie
+# IDH_MENU_FILE_SAVE_SOURCE
+$ Polecenie Plik|Zapisz źródłowy
+K Zapisz źródłowy, polecenie
+# IDH_MENU_FILE_SAVE_SOURCE_AS
+$ Polecenie Plik|Zapisz źródłowy jako
+K Zapisz źródłowy jako, polecenie
+# IDH_MENU_FILE_SAVE_DESTINATION
+$ Polecenie Plik|Zapisz docelowy
+K Zapisz docelowy, polecenie
+# IDH_MENU_FILE_SAVE_DESTINATION_AS
+$ Polecenie Plik|Zapisz docelowy jako
+K Zapisz docelowy jako, polecenie
+# IDH_MENU_FILE_SAVE_BOTH
+$ Polecenie Plik|Zapisz oba 
+K Zapisz oba, polecenie
+# IDH_MENU_FILE_SAVE_ALL
+$ Polecenie Plik|Zapisz wszystko
+K Zapisz wszystko, polecenie
+# IDH_MENU_FILE_CLOSE
+$ Polecenie Plik|Zamknij
+K Zamknij, polecenie
+# IDH_MENU_FILE_CLOSE_ALL
+$ Polecenie Plik|Zamknij wszystko
+K Zamknij wszystko, polecenie
+# IDH_MENU_FILE_EXIT
+$ Polecenie Plik|Zakończ
+K Zakończ, polecenie
+# IDH_MENU_EDIT
+$ Menu Edycja
+K Edycja, menu
+# IDH_MENU_EDIT_UNDO
+$ Polecenie Edycja|Cofnij
+K Cofnij, polecenie
+# IDH_MENU_EDIT_REDO
+$ Polecenie Edycja|Ponów
+K Ponów, polecenie
+# IDH_MENU_EDIT_CUT
+$ Polecenie Edycja|Wytnij
+K Wytnij, polecenie
+# IDH_MENU_EDIT_COPY
+$ Polecenie Edycja|Kopiuj
+K Kopiuj, polecenie
+# IDH_MENU_EDIT_PASTE
+$ Polecenie Edycja|Wklej
+K Wklej, polecenie
+# IDH_MENU_EDIT_DELETE
+$ Polecenie Edycja|Usuń
+K Usuń, polecenie
+# IDH_MENU_EDIT_SELECT_ALL
+$ Polecenie Edycja|Zaznacz wszystko
+K Zaznacz wszystko, polecenie
+# IDH_MENU_EDIT_FIND
+$ Polecenie Edycja|Znajdź
+K Znajdź, polecenie
+# IDH_MENU_EDIT_REPLACE
+$ Polecenie Edycja|Zamień
+K Zamień, polecenie
+# IDH_MENU_EDIT_FIND_NEXT
+$ Polecenie Edycja|Znajdź następny
+K Znajdź następny, polecenie
+# IDH_MENU_VIEW
+$ Menu Widok
+K Widok, menu
+# IDH_MENU_VIEW_SOURCE_TOKENS
+$ Polecenie Widok|Granice wyrazów tekstu źródłowego
+K Granice wyrazów tekstu źródłowego, polecenie
+# IDH_MENU_VIEW_TARGET_TOKENS
+$ Polecenie Widok|Granice wyrazów tekstu docelowego
+K Granice wyrazów tekstu docelowego, polecenie
+# IDH_MENU_VIEW_SOURCE_UNKNOWN
+$ Polecenie Widok|Wyrazy nieznane tekstu źródłowego
+K Wyrazy nieznane tekstu źródłowego, polecenie
+# IDH_MENU_VIEW_TARGET_UNKNOWN
+$ Polecenie Widok|Wyrazy nieznane tekstu docelowego
+K Wyrazy nieznane tekstu docelowego, polecenie
+# IDH_MENU_VIEW_HORIZONTAL
+$ Polecenie Widok|Ustawienie poziome
+K Ustawienie poziome, polecenie
+# IDH_MENU_VIEW_VERTICAL
+$ Polecenie Widok|Ustawienie pionowe
+K Ustawienie pionowe, polecenie
+# IDH_MENU_VIEW_SOURCE
+$ Polecenie Widok|Okno źródłowe
+K Okno źródłowe, polecenie
+# IDH_MENU_VIEW_DESTINATION
+$ Polecenie Widok|Okno docelowe
+K Okno docelowe, polecenie
+# IDH_MENU_VIEW_TOOLBAR
+$ Polecenie Widok|Pasek narzędzi
+K Pasek narzędzi, polecenie
+# IDH_MENU_VIEW_STATUSBAR
+$ Polecenie Widok|Pasek stanu
+K Pasek stanu, polecenie
+# IDH_MENU_VIEW_FONT
+$ Polecenie Widok|Czcionka
+K Czcionka, polecenie
+# IDH_MENU_TRANSLATION
+$ Menu Tłumacz
+K Tłumacz, menu
+# IDH_MENU_TRANSLATION_TRANSLATE
+$ Polecenie Tłumacz|Tłumacz
+K Tłumacz, polecenie
+# IDH_MENU_TRANSLATION_PLEN
+$ Polecenie Tłumacz|Polsko-Angielskie
+K Polsko-Angielskie, polecenie
+# IDH_MENU_TRANSLATION_ENPL
+$ Polecenie Tłumacz|Angielsko-Polskie
+K Angielsko-Polskie, polecenie
+# IDH_MENU_TRANSLATION_SETTINGS
+$ Polecenie Tłumacz|Ustawienia
+K Ustawienia
+# IDH_MENU_TOOLS
+$ Menu Narzędzia
+K Narzędzia, menu
+# IDH_MENU_TOOLS_ANALYSE
+$ Polecenie Narzędzia|Analizuj tekst
+K Analizuj tekst, polecenie
+# IDH_MENU_TOOLS_SPELLCHECKING
+$ Polecenie Opcje|Sprawdzaj pisownię
+K Sprawdzaj pisownię, polecenie
+# IDH_MENU_TOOLS_VARIANTS
+$ Polecenie Narzędzia|Generuj warianty
+K Warianty, Polecenie
+# IDH_MENU_TOOLS_SYNTAX_TREE
+$ Polecenie Narzędzia|Pokazuj drzewa składniowe
+K Pokazuj drzewa składniowe, polecenie
+# IDH_MENU_TOOLS_DICTIONARY
+$ Polecenie Narzędzia|Słownik
+K Słownik, polecenie
+# IDH_MENU_TOOLS_SPEAK
+$ Polecenie Narzędzia|Wypowiedz
+K Wypowiedz, polecenie
+# IDH_MENU_TOOLS_DICTATE
+$ Polecenie Narzędzia|Słuchaj
+K Słuchaj, polecenie
+# IDH_DATA_COMPILER
+$ Polecenie Narzędzia|Kompilator danych korporacyjnych
+K Kompilator danych korporacyjnych, polecenie
+# IDH_PWN_DICTIONARY
+$ Polecenie Narzędzia|Słownik PWN-Oxford
+K Słownik PWN-Oxford, polecenie
+# IDH_MENU_TOOLS_APPLICATION_LANGUAGE
+$ Polecenie Narzędzia|Język programu
+K Język programu, polecenie
+# IDH_MENU_HELP
+$ Menu Pomoc
+K Pomoc, menu
+# IDH_MENU_HELP_TRANSLATICA_HELP
+$ Polecenie Pomoc|Pomoc programu Translatica
+K Pomoc programu Translatica, polecenie
+# IDH_MENU_HELP_ABOUT
+$ Polecenie Pomoc|O programie
+K O programie, polecenie
+# IDH_CORP_DATA
+$ Pamięć tłumaczeń i słownik firmy
+# IDH_BATCHER
+$ Batcher
+K Przetwarzanie wsadowe
+# IDH_UPDATER
+$ Updater
+K Automatyczna aktualizacja
+??
+
+??
+
+??
+
+??
+

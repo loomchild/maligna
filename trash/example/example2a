@@ -1,0 +1,9 @@
+#!/bin/bash
+SCRIPT_DIR=`dirname $0`
+PROJECT_HOME=$SCRIPT_DIR/../..
+FILE=poznan
+SOURCE_LANGUAGE=pl
+TARGET_LANGUAGE=de
+
+$PROJECT_HOME/bin/maligna parse -c txt $PROJECT_HOME/example/txt/$FILE-$SOURCE_LANGUAGE.txt $PROJECT_HOME/example/txt/$FILE-$TARGET_LANGUAGE.txt  |  $PROJECT_HOME/bin/maligna modify -c srxsplit -f $PROJECT_HOME/example/srx/my.srx -l $SOURCE_LANGUAGE,$TARGET_LANGUAGE  |  $PROJECT_HOME/bin/maligna modify -c trim  >  $FILE-split.al
+

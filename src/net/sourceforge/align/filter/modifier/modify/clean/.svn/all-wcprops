@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/align/!svn/ver/50/trunk/maligna/src/net/sourceforge/align/filter/modifier/modify/clean
+END
+FilterNonWordsCleanAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/filter/modifier/modify/clean/FilterNonWordsCleanAlgorithm.java
+END
+UnifyRareWordsCleanAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/align/!svn/ver/53/trunk/maligna/src/net/sourceforge/align/filter/modifier/modify/clean/UnifyRareWordsCleanAlgorithm.java
+END
+TrimCleanAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/align/!svn/ver/50/trunk/maligna/src/net/sourceforge/align/filter/modifier/modify/clean/TrimCleanAlgorithm.java
+END
+LowercaseCleanAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/filter/modifier/modify/clean/LowercaseCleanAlgorithm.java
+END
+CleanAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/filter/modifier/modify/clean/CleanAlgorithm.java
+END

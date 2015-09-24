@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.1">
+	<header creationtool="human" creationtoolversion="1.0" segtype="sentence" o-tmf="plaintext" adminlang="en" srclang="pl" datatype="plaintext" />
+	<body>
+		<tu>
+			<tuv xml:lang="pl">
+				<seg>Pierwsze zdanie.</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<prop type="score">0.1</prop>
+				<seg>First sentence. </seg>
+			</tuv>
+		</tu>
+		<tu>
+			<tuv xml:lang="en">
+				<seg>Second sentence.</seg>
+			</tuv>
+		</tu>
+		<tu>
+			<tuv xml:lang="de">
+				<seg>Erste Satz.</seg>
+			</tuv>
+			<tuv xml:lang="de">
+				<seg>Zweite Satz.</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

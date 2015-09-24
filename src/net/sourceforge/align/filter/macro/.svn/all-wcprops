@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/align/!svn/ver/50/trunk/maligna/src/net/sourceforge/align/filter/macro
+END
+MooreMacroTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/align/!svn/ver/45/trunk/maligna/src/net/sourceforge/align/filter/macro/MooreMacroTest.java
+END
+Macro.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/filter/macro/Macro.java
+END
+MooreMacro.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/align/!svn/ver/50/trunk/maligna/src/net/sourceforge/align/filter/macro/MooreMacro.java
+END
+TranslationMacro.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/align/!svn/ver/50/trunk/maligna/src/net/sourceforge/align/filter/macro/TranslationMacro.java
+END
+MacroTestSuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/align/!svn/ver/45/trunk/maligna/src/net/sourceforge/align/filter/macro/MacroTestSuite.java
+END
+PoissonTranslationMacro.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/align/!svn/ver/50/trunk/maligna/src/net/sourceforge/align/filter/macro/PoissonTranslationMacro.java
+END
+PoissonMacro.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/align/!svn/ver/42/trunk/maligna/src/net/sourceforge/align/filter/macro/PoissonMacro.java
+END
+GaleAndChurchMacro.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/align/!svn/ver/44/trunk/maligna/src/net/sourceforge/align/filter/macro/GaleAndChurchMacro.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception
+END
+UnknownParameterException.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception/UnknownParameterException.java
+END
+ParameterFormatException.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception/ParameterFormatException.java
+END
+MissingParameterException.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception/MissingParameterException.java
+END
+WrongArgumentCountException.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception/WrongArgumentCountException.java
+END
+ParametersParseException.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception/ParametersParseException.java
+END
+CommandException.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/align/!svn/ver/11/trunk/maligna/src/net/sourceforge/align/ui/console/command/exception/CommandException.java
+END

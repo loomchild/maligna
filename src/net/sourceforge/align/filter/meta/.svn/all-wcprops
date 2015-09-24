@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta
+END
+FilterDecorators.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta/FilterDecorators.java
+END
+CompositeFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta/CompositeFilter.java
+END
+IgnoreInfiniteProbabilityAlignmentsFilterDecoratorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta/IgnoreInfiniteProbabilityAlignmentsFilterDecoratorTest.java
+END
+IgnoreInfiniteProbabilityAlignmentsFilterDecorator.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta/IgnoreInfiniteProbabilityAlignmentsFilterDecorator.java
+END
+CompositeFilterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta/CompositeFilterTest.java
+END
+MetaTestSuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/align/!svn/ver/46/trunk/maligna/src/net/sourceforge/align/filter/meta/MetaTestSuite.java
+END

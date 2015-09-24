@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SCRIPT_DIR=`dirname $0`
+PROJECT_HOME=$SCRIPT_DIR/../..
+
+$PROJECT_HOME/bin/maligna parse -c txt $PROJECT_HOME/example/txt/poznan-pl.txt $PROJECT_HOME/example/txt/poznan-de.txt  |  $PROJECT_HOME/bin/maligna modify -c split-sentence  |  $PROJECT_HOME/bin/maligna modify -c trim  |  $PROJECT_HOME/bin/maligna align -c viterbi -a normal -n char -s iterative-band  |  $PROJECT_HOME/bin/maligna select -c one-to-one  |  $PROJECT_HOME/bin/maligna format -c txt poznan-pl-align.txt poznan-de-align.txt
+

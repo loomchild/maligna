@@ -1,0 +1,18 @@
+package net.sourceforge.align.filter.aligner.align.hmm;
+
+import net.sourceforge.align.filter.aligner.align.AlignAlgorithm;
+import net.sourceforge.align.filter.aligner.align.hmm.util.calculator.Calculator;
+import net.sourceforge.align.filter.aligner.align.hmm.util.category.Category;
+import net.sourceforge.align.filter.aligner.align.hmm.util.matrix.MatrixFactory;
+
+/**
+ * Interfejs fabryki produkującej algorytmy dopasowujące oparte o ukryte modele
+ * markowa (HMM). Używana przez adaptacyjny algorytm dopasowywania.
+ * @author loomchild
+ */
+public interface HmmAlignAlgorithmFactory {
+
+	public AlignAlgorithm createAlignAlgorithm(Calculator calculator, 
+			Category[] categoryList, MatrixFactory matrixFactory);
+	
+}
