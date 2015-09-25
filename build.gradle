@@ -17,6 +17,7 @@ dependencies {
 	compile 'net.loomchild:segment:2.0.0-SNAPSHOT'
 	compile 'commons-logging:commons-logging:1.1.1'
 	compile 'commons-cli:commons-cli:1.2'
+	compile 'cpsuite:cpsuite:1.2.6'
 	compile 'junit:junit:4.1'
 }
 
