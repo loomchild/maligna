@@ -113,12 +113,12 @@ instead of redirecting them directly to the next command for debugging purposes.
 This example should be executed in the main directory of the project. 
 Ready to run example scripts can be found in the examples/scripts directory.
 
-bin/maligna parse -c txt example/txt/poznan-pl.txt example/txt/poznan-de.txt | \
-bin/maligna modify -c split-sentence | \
-bin/maligna modify -c trim | \
-bin/maligna align -c viterbi -a poisson -n word -s iterative-band | \
-bin/maligna select -c one-to-one | \
-bin/maligna format -c txt poznan-pl-align.txt poznan-de-align.txt
+    bin/maligna parse -c txt example/txt/poznan-pl.txt example/txt/poznan-de.txt | \
+    bin/maligna modify -c split-sentence | \
+    bin/maligna modify -c trim | \
+    bin/maligna align -c viterbi -a poisson -n word -s iterative-band | \
+    bin/maligna select -c one-to-one | \
+    bin/maligna format -c txt poznan-pl-align.txt poznan-de-align.txt
 
 Another interesting case is alignment using Moore's algorithm, 
 which requires a properly aligned corpus to build a translation model. 
@@ -126,25 +126,25 @@ To do this you must perform several groups of commands.
 
 Split a text into sentences and clean them up:
 
-bin/maligna parse -c txt example/txt/poznan-pl.txt example/txt/poznan-de.txt | \
-bin/maligna modify -c split-sentence | \
-bin/maligna modify -c trim > \
-poznan-split.al
+    bin/maligna parse -c txt example/txt/poznan-pl.txt example/txt/poznan-de.txt | \
+    bin/maligna modify -c split-sentence | \
+    bin/maligna modify -c trim > \
+    poznan-split.al
 
 Align using sentence length-based algorithm (Brown, Gale and Church) 
 and select most probable alignments:
 
-cat poznan-split.al | \
-bin/maligna align -c viterbi -a poisson -n word -s iterative-band | \
-bin/maligna select -c one-to-one | \
-bin/maligna select -c fraction -f 0.85 > \
-poznan-align-length.al
+    cat poznan-split.al | \
+    bin/maligna align -c viterbi -a poisson -n word -s iterative-band | \
+    bin/maligna select -c one-to-one | \
+    bin/maligna select -c fraction -f 0.85 > \
+    poznan-align-length.al
 
 Finally align using Moore's algorithm:
 
-cat poznan-split.al | \
-bin/maligna align -c viterbi -a translation -n word -s iterative-band -t poznan-align-length.al > \
-poznan-align.al
+    cat poznan-split.al | \
+    bin/maligna align -c viterbi -a translation -n word -s iterative-band -t poznan-align-length.al > \
+    poznan-align.al
 
 ## Formats
 
