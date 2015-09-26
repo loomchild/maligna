@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SCRIPT_DIR=`dirname $0`
+PROJECT_HOME=$SCRIPT_DIR/..
+JARS=$PROJECT_HOME/lib/*
+CLASS=net.loomchild.maligna.ui.console.Maligna
+
+exec java -cp "$CLASSPATH:$PROJECT_HOME/build/classes:$JARS" $CLASS $*
