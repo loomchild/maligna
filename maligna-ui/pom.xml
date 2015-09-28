@@ -4,7 +4,7 @@
 	
 	<groupId>net.loomchild</groupId>
 	<artifactId>maligna-ui</artifactId>
-	<version>3.0.0</version>
+	<version>3.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>maligna-ui</name>
