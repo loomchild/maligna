@@ -114,7 +114,7 @@ instead of redirecting them directly to the next command for debugging purposes.
 This example should be executed in the main directory of the project. 
 Ready to run example scripts can be found in the examples/scripts directory.
 
-    bin/maligna parse -c txt example/txt/poznan-pl.txt example/txt/poznan-de.txt | \
+    bin/maligna parse -c txt examples/txt/poznan-pl.txt examples/txt/poznan-de.txt | \
     bin/maligna modify -c split-sentence | \
     bin/maligna modify -c trim | \
     bin/maligna align -c viterbi -a poisson -n word -s iterative-band | \
@@ -127,7 +127,7 @@ To do this you must perform several groups of commands.
 
 Split a text into sentences and clean them up:
 
-    bin/maligna parse -c txt example/txt/poznan-pl.txt example/txt/poznan-de.txt | \
+    bin/maligna parse -c txt examples/txt/poznan-pl.txt examples/txt/poznan-de.txt | \
     bin/maligna modify -c split-sentence | \
     bin/maligna modify -c trim > \
     poznan-split.al
