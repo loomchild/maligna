@@ -15,7 +15,8 @@ More information about maligna can be found in an article which I co-authored
 
 ## Library
 
-mALIGNa library is available on Maven central. See [pom.xml](maligna/pom.xml) for details.
+mALIGNa library is available on [Maven central](http://search.maven.org/#search|ga|1|net.loomchild.maligna). 
+See [pom.xml](maligna/pom.xml) for details.
 
 ## Requirements
 
