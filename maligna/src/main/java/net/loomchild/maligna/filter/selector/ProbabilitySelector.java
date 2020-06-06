@@ -21,7 +21,7 @@ public class ProbabilitySelector implements Filter {
 	/**
 	 * Creates selector.
 	 * @param probabilityThreshold Minimum accepted alignment probability. 
-	 * From range <0,1>.
+	 * From range [0,1].
 	 */
 	public ProbabilitySelector(double probabilityThreshold) {
 		assert probabilityThreshold >= 0.0f && probabilityThreshold <= 1.0f;

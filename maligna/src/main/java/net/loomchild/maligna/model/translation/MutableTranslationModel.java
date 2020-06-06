@@ -38,7 +38,7 @@ public class MutableTranslationModel implements TranslationModel {
 	 * Retrieves mutable translation data including translation probabilities 
 	 * to other words for a word with given id. If the source word is not 
 	 * present in the model it is automatically created.
-	 * @param sourceWid source word id, >= 0.
+	 * @param sourceWid source word id, &gt;= 0.
 	 * @return translation data
 	 */
 	public MutableSourceData getMutable(int sourceWid) {

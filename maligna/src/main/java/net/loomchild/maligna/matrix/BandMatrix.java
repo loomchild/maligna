@@ -38,8 +38,8 @@ public class BandMatrix<T> implements Matrix<T> {
 
 	/**
 	 * Creates matrix.
-	 * @param width width of matrix (columns), >= 1
-	 * @param height height of matrix (rows), >= 1
+	 * @param width width of matrix (columns), &gt;= 1
+	 * @param height height of matrix (rows), &gt;= 1
 	 * @param bandRadius radius
 	 */
 	public BandMatrix(int width, int height, int bandRadius) {

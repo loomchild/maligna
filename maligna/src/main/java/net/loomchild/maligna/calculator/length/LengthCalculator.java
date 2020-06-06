@@ -76,7 +76,7 @@ public abstract class LengthCalculator implements Calculator {
 	 * 
 	 * @param sourceLengthList lengths of source segments
 	 * @param targetLengthList lengths of target segments
-	 * @return source to target segments alignment score, >= 0 
+	 * @return source to target segments alignment score, &gt;= 0 
 	 */
 	protected abstract float calculateLengthScore(List<Integer> sourceLengthList, 
 			List<Integer> targetLengthList);

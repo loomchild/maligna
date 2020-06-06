@@ -20,8 +20,8 @@ public class FullMatrix<T> implements Matrix<T> {
 	
 	/**
 	 * Creates a matrix.
-	 * @param width matrix width (number of columns), >= 1.
-	 * @param height matrix height (number of rows), >= 1.
+	 * @param width matrix width (number of columns), &gt;= 1.
+	 * @param height matrix height (number of rows), &gt;= 1.
 	 */
 	public FullMatrix(int width, int height) {
 		this.width = width;

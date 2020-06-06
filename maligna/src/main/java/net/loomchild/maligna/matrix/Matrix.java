@@ -22,7 +22,7 @@ public interface Matrix<T> {
 	public int getHeight();
 	
 	/**
-	 * @return real matrix size (number of stored elements, <= width * height
+	 * @return real matrix size (number of stored elements, &lt;= width * height
 	 */
 	public int getSize();
 	

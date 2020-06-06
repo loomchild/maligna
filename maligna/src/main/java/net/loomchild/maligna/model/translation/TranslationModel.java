@@ -18,7 +18,7 @@ public interface TranslationModel {
 	/**
 	 * Retrieves translation data including translation probabilities to other
 	 * words for a word with given id
-	 * @param sourceWid source word id, >= 0.
+	 * @param sourceWid source word id, &gt;= 0.
 	 * @return translation data
 	 */
 	public SourceData get(int sourceWid);

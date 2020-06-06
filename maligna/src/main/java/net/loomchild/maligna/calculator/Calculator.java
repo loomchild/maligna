@@ -20,7 +20,7 @@ public interface Calculator {
 	 * 
 	 * @param sourceSegmentList source segment list
 	 * @param targetSegmentList target segment list
-	 * @return result (-ln(probability)) of the alignment, >= 0
+	 * @return result (-ln(probability)) of the alignment, &gt;= 0
 	 */
 	public float calculateScore(List<String> sourceSegmentList, 
 			List<String> targetSegmentList);

@@ -12,7 +12,7 @@ public interface Counter {
 	 * Calculates length of a segment.
 	 * 
 	 * @param segment segment
-	 * @return length of a segment, >= 0
+	 * @return length of a segment, &gt;= 0
 	 */
 	public int calculateLength(String segment);
 	

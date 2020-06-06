@@ -20,7 +20,7 @@ public class FractionSelector implements Filter {
 	
 	/**
 	 * Creates filter.
-	 * @param fraction fraction that will be left after filtering, <0,1>
+	 * @param fraction fraction that will be left after filtering, [0,1]
 	 */
 	public FractionSelector(float fraction) {
 		assert fraction >= 0.0f && fraction <= 1.0f;

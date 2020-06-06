@@ -17,7 +17,7 @@ public interface LanguageModel {
 	/**
 	 * Returns word occurrence probability in modeled language.
 	 * @param wid word id
-	 * @return word occurrence probability; <0, 1>
+	 * @return word occurrence probability; [0, 1]
 	 */
 	public float getWordProbability(int wid);
 	
