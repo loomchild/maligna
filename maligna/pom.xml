@@ -4,7 +4,7 @@
 
 	<groupId>net.loomchild</groupId>
 	<artifactId>maligna</artifactId>
-	<version>3.0.1-SNAPSHOT</version>
+	<version>3.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>maligna</name>
@@ -29,7 +29,7 @@
 		<url>https://github.com/loomchild/maligna</url>
 		<connection>scm:git:ssh://git@github.com/loomchild/maligna.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/loomchild/maligna.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>3.0.1</tag>
   </scm>
 
 	<properties>
