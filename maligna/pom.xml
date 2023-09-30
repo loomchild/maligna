@@ -191,6 +191,7 @@
 						</manifest>
 						<manifestEntries>
 							<Build-Date>${maven.build.timestamp}</Build-Date>
+							<Automatic-Module-Name>net.loomchild.mALIGNa</Automatic-Module-Name>
 						</manifestEntries>
 					</archive>
 				</configuration>
